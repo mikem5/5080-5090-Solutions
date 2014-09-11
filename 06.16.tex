@@ -1,0 +1,14 @@
+{\bf 06.16} \quad Note: the pdf of $f_{x_1,x_2} = \frac{1}{x_{1}^{2}}\frac{1}{x_{2}^{2}}$
+
+a) We need to find $f_{u,v} = f_{x_1,x_2} (x_1(u,v),x_2(u,v)) \vert J \vert$ where J is our jacobian. First we let $u = x_1 x_2$ and $v = x_1$ thus $x_1 = v$ and $x_2 = \frac{u}{v}$, now we can find J.
+
+\[ J = \left| \begin{array}{cc}
+0 & 1 \\
+\frac{1}{v} & 0 \end{array} \right| = \frac{1}{v} \]
+
+Finally, our pdf is:
+\begin{eqnarray*}
+f_{U,V}(u,v) &=& f_{x_1,x_2}(v,\frac{u}{v})\left| \frac{1}{v} \right| \\
+ &=& \frac{1}{v^2}\frac{1}{(\frac{u}{v})^2}\left| \frac{1}{v} \right| \\
+&=& \frac{1}{u^2v} , 1 < v < u <\infty
+\end{eqnarray*}
