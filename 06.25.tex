@@ -1,0 +1,18 @@
+{\bf 06.25} \quad First note, $X_1, X_2, X_3, X_4$ are all independant, but they are not IID as only $X_2, X_3, X_4 \sim POI(5)$ with $X_1$ not being listed. So formula 6.4.5 does not hold. 6.4.4 does though. \\
+
+A)\\
+\begin{eqnarray*}
+Mgf(Y) &=& M_{X_1}(t) M_{X_2 + X_3 + X_4}(t) \\
+	&=& M_{X_1}(t) (M_{X_{i}}(t))^3 \\
+\end{eqnarray*}
+Since $X_2, X_3, X_4$ are iid 6.4.5 holds for moving to this mgf \\
+\begin{eqnarray*}
+	&=& M_{X_1}(t) (e^{\mu(e^t - 1)})^3 \\
+	&=& M_{X_1}(t) e^{3\mu(e^t - 1)} \\
+	&=& M_{X_1}(t) e^{15(e^t -1)} \\
+e^{25(e^t -1)}	&=& M_{X_1}(t) e^{15(e^t -1)}\\
+\frac{e^{25(e^t -1)}}{e^{15(e^t -1)}} &=& M_{X_1}(t)\\
+e^{10(e^t -1)}	&=& M_{X_1}(t) \sim POI(10)\\
+\end{eqnarray*}
+
+B) For $W = X_1 + X_2$ we have $X_1 \sim POI(10)$ and $X_2 \sim POI(5)$. So $POI(10 + 5) = POI(15)$
