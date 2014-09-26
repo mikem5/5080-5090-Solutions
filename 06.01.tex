@@ -1,2 +1,41 @@
 
-{\bf 06.01} \quad This is where the first solution will go.
+{\bf 06.01} 
+\section*{Given: the pdf of x ${f}_{x} \left( x \right) =\begin{cases} 4{ x }^{ 3 }\quad \quad ,\quad 0<x<1 \\ 0\quad \quad \quad ,\quad o/w \end{cases}$\\Find: PDF of  a) $Y={ X }^{ 4 }$}
+
+\paragraph{Setup:} Use the CDF technique to get the CDF of Y in terms of a CDF of X\\${ F }_{ Y }(y)=P[Y\le y]=P[{ X }^{ 4 }\le Y]=P[{ -y }^{ \frac { 1 }{ 4 }  }\le X\le { y }^{ \frac { 1 }{ 4 }  }]={ F }_{ X }({ y }^{ \frac { 1 }{ 4 }  })-{ F }_{ X }(-{ y }^{ \frac { 1 }{ 4 }  })$
+
+\paragraph{Steps: i)} Differentiate with respect to y to find an equation given in terms of the pdf of x:\\ ${ f }_{ y }(y)=\frac { d }{ dy } { F }_{ X }({ y }^{ \frac { 1 }{ 4 }  })-\frac { d }{ dy } { F }_{ X }(-{ y }^{ \frac { 1 }{ 4 }  })={ f }_{ x }({ y }^{ \frac { 1 }{ 4 }  })\frac { d }{ dy } { y }^{ \frac { 1 }{ 4 }  }-{ f }_{ x }(-{ y }^{ \frac { 1 }{ 4 }  })\frac { d }{ dy } { -y }^{ \frac { 1 }{ 4 }  }={ f }_{ x }({ y }^{ \frac { 1 }{ 4 }  })\frac { { y }^{ -\frac { 3 }{ 4 }  } }{ 4 } -{ f }_{ x }(-{ y }^{ \frac { 1 }{ 4 }  })\frac { { -y }^{ -\frac { 3 }{ 4 }  } }{ 4 } $
+
+\subparagraph{ii)} Plug in the original limits and function for the pdf of x, and compute the cdf for y
+
+\paragraph{Result:} ${ f }_{ y }(y)=\begin{cases} { 4y }^{ \frac { 3 }{ 4 }  }\frac { 1 }{ { 4y }^{ \frac { 3 }{ 4 }  } } \quad ,\quad 0<x<1 \\ 0\quad  \quad ,\quad o/w \end{cases}=\begin{cases} 1 \quad \quad ,\quad 0<x<1\\ 0 \quad \quad ,\quad o/w \end{cases}$
+
+ \section*{Find: PDF of b) $W={ e }^{ X }$} 
+ 
+ \paragraph{Setup:} Use the CDF technique to get the CDF of W in terms of a CDF of X\\${ F }_{ W }(w)=P[W\le w]=P[{ e }^{ X }\le W]=P[X\le{lnW} ]={ F }_{ X }(lnW)$
+
+\paragraph{Steps: i)} Differentiate with respect to w to find an equation given in terms of the pdf of x:\\ ${ f }_{ w }(w)=\frac { d }{ dw } { F }_{ X }(lnW)\frac{d }{ dw }(lnw)={ f }_{ x }(lnw)\frac { 1 }{ w } $
+
+\subparagraph{ii)} Plug in the original limits and function for the pdf of x, and compute the cdf for y
+
+\paragraph{Result:} ${ f }_{ W }(w)=\begin{cases} \frac{{ 4(lnw) }^{3}}{w} \quad ,\quad 1<w<e \\ 0\quad  \quad ,\quad o/w \end{cases}$
+ 
+ \section*{Find: PDF of c) $Z=\ln x$ }
+ 
+ \paragraph{Setup:} Use the CDF technique to get the CDF of Z in terms of a CDF of X\\${ F }_{ Z }(z)=P[Z\le z]=P[lnx\le z]=P[X \le{e}^{z} ]={ F }_{ X }({e}^{z})$
+
+\paragraph{Steps: i)} Differentiate with respect to z to find an equation given in terms of the pdf of x:\\ ${ f }_{ z }(z)=\frac { d }{ dz } { F }_{ X }({e}^{z})={ f }_{ x }({e}^{z})\frac { d{e}^{z} }{ dz } $
+
+\subparagraph{ii)} Plug in the original limits and function for the pdf of x, and compute the cdf for y
+
+\paragraph{Result:} ${ f }_{ Z }(z)=\begin{cases} { 4e }^{4z} \quad ,\quad -\infty\le{z}<0 \\ 0\quad  \quad ,\quad o/w \end{cases}$
+
+\section*{Find: PDF of d) $U={ (X-0.5) }^{ 2 }$}
+
+\paragraph{Setup:} Use the CDF technique to get the CDF of U in terms of a CDF of X\\${ F }_{ U }(u)=P[U\le u]=P[{ (X-0.5) }^{ 2 }\le u]=P[ \left| X-0.5 \right| \le { u }^{ 0.5 } ]={ F }_{ X }({u}^{1/2}+1/2)-{ F }_{ X }({-u}^{1/2}+1/2)$
+
+\paragraph{Steps: i)} Differentiate with respect to u to find an equation given in terms of the pdf of x:\\ ${ f }_{ U }(u)=\frac { d }{ du } { F }_{ X }({u}^{1/2}+1/2)={ f }_{ x }({u}^{1/2}+1/2)\frac{ d }{ du }({u}^{1/2}+1/2)-{ f }_{ x }({-u}^{1/2}+1/2)\frac{ d }{ du }({-u}^{1/2}+1/2)$\\${ f }_{ x }({u}^{1/2}+1/2)1/2{u}^{-1/2})-{ f }_{ x }({-u}^{1/2}+1/2)1/2{u}^{-1/2}$ 
+
+\subparagraph{ii)} INCOMPLETE
+
+\paragraph{Result:} ${ f }_{ Z }(z)=\begin{cases} { 4e }^{4z} \quad ,\quad -\infty\le{z}<0 \\ 0\quad  \quad ,\quad o/w \end{cases}$

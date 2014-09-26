@@ -1,2 +1,45 @@
 
-{\bf 06.02} \quad This is where the second solution will go.
+{\bf 06.02} 
+
+\section*{Given: $X\sim Unif(0,1)$\\ Find: a) PDF of $Y={X}^{1/4}$ }
+
+\paragraph{Setup:} ${ F }_{ Y }(y)=P[Y\le y]=P[{X}^{1/4}\le y]=P[X \le{y}^{4} ]={ F }_{ X }({y}^{4})$
+
+\paragraph{Steps: i)} find the pdf of x. Because X is a Uniform distribution with parameters 1 and 0, the pdf, which for Unif(a,b) is 1/b-a where $a<x<b$. Here, Unif(0,1) gives 1/1-0 =1
+
+\subparagraph{ii)}Differentiate with respect to y to find an equation given in terms of the pdf of x:\\ ${ f }_{ Y }(y)=\frac { d }{ dy } { F }_{ X }({y}^{4})={4y}^{3}$
+
+\paragraph{Result:} ${ f }_{ Y }(y)=\begin{cases} { 4y }^{3} \quad ,\quad 0<{y}<1 \\ 0\quad  \quad ,\quad o/w \end{cases}$
+
+\section*{Find: b) PDF of $W={e}^{-X}$ }
+
+\paragraph{Setup:} ${ F }_{ W }(z)=P[W\le w]=P[{e}^{-X}\le W]=P[-X \le{lnw} ]=P[X \ge {-lnw}]= 1-{F}_{x}(-lnw)$
+
+\paragraph{Steps: i)} find the pdf of x. See part a) for an explanation of why it is 1 when $a<x<b$
+
+
+\subparagraph{ii)}Differentiate with respect to w to find an equation given in terms of the pdf of x:\\ ${ f }_{ W }(w)= -\frac { d }{ dw } { F }_{ X }\frac { d }{ dw}(-lnw) = -{ f }_{ X }(-lnw)\frac{-1}{w} \quad for \quad {e}^{-1}<w<1=-\frac{1}{w}$
+
+\paragraph{Result:} ${ f }_{ W }(w)=\begin{cases} \frac{ 1 }{w} \quad ,\quad {e}^{-1}<w<1 \\ 0\quad  \quad ,\quad o/w \end{cases}$
+
+\section*{Find: c) PDF of $Z=1-{e}^{-X}$ }
+
+\paragraph{Setup:} ${ F }_{ Z }(z)=P[Z\le z]=P[1-{e}^{-X}\le z]=P[-{e}^{-X}\le z-1]=P[{e}^{-X}\ge 1-z]= P[-X\ge ln(1-z)]=P[X\le -ln(1-z)]={F}_{x}(-ln(1-z))$
+
+\paragraph{Steps: i)} find the pdf of x. See part a) for an explanation of why it is 1 when $a<x<b$
+
+
+\subparagraph{ii)}Differentiate with respect to w to find an equation given in terms of the pdf of x:\\ ${ f }_{ Z }(z)= -ln(1-z)=-\frac { -1 }{1-z}=\frac{1}{1-z} \quad for \quad 0<z<{e}^{-1}$
+
+\paragraph{Result:} ${ f }_{ W }(w)=\begin{cases} \frac{ 1 }{1-z} \quad ,\quad 0<z<{e}^{-1} \\ 0\quad  \quad ,\quad o/w \end{cases}$
+
+\section*{Find: d) PDF of $U=X(1-X)$ }
+
+\paragraph{Setup:} ${ F }_{ U }(u)=P[U\le u]=P[X(1-x)\le u]=P[-{X}^{2}+X \le u]=P[-(X-1/2)^{2}\le u-1/4]= P[(X-1/2)^{2}\ge 1/4-u]== P[\left|(X-1/2) \right| \ge (1/4-u)^{1/2} ]= $
+
+\paragraph{Steps: i)} find the pdf of x. See part a) for an explanation of why it is 1 when $a<x<b$
+
+
+\subparagraph{ii)}INCOMPLETE:\\ ${ f }_{ Z }(z)= -ln(1-z)=-\frac { -1 }{1-z}=\frac{1}{1-z} \quad for \quad 0<z<{e}^{-1}$
+
+\paragraph{Result:} ${ f }_{ W }(w)=\begin{cases} \frac{ 1 }{1-z} \quad ,\quad 0<z<{e}^{-1} \\ 0\quad  \quad ,\quad o/w \end{cases}$

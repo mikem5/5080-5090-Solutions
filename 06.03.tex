@@ -1,0 +1,22 @@
+
+{\bf 06.03} 
+
+\section*{Given: PDF ${ f }_{ R }(r)=\begin{cases} 6r(1-r) \quad ,\quad 0<{r}<1 \\ 0\quad  \quad ,\quad o/w \end{cases}$\\ Find: Distribution of the circumference}
+
+\paragraph{Setup:} The circumference is $c=2\pi r$ - we have the pdf in terms of x, so this is the transformation\\ ${ F }_{ C }(c)=P[C\le c]=P[2\pi r\le c]=P[r \le c/2 \pi] ={F}_{x}(c/2 \pi)$
+
+\paragraph{Steps: i)} Differentiate with respect to c to find an equation given in terms of the pdf of x.\\ ${ f }_{ C }(c)= \frac{d}{dc} {F}_{R}(c/2\pi)={f}_{R}(c/2\pi)\frac{d}{dc}(c/2\pi)={f}_{R}(c/2\pi)(1/2\pi)$
+
+
+\subparagraph{ii)}Plug the original pdf back into this new form:\\ ${ f }_{ C }(c)= \frac{6c}{2\pi}(1-(c/2\pi))(1/2\pi)=\frac {6c(2\pi-c}{{2\pi}^{3}} \quad if \quad 0<c<2\pi$
+
+\paragraph{Result:} ${ f }_{ C }(c)=\begin{cases} \frac {6c(2\pi-c}{{2\pi}^{3}} \quad , \quad 0<c<2\pi  \\ 0\quad  \quad ,\quad o/w \end{cases}$
+
+\section*{Find: Distribution of the area }
+
+\paragraph{Setup:} The area is $a=\pi{r}^{2}$ so the cdf ${ F }_{ A }(a)=P[A\le a]=P[\pi{r}^{2}\le a]=P[{r}^{2}\le a/\pi]\\=P[\left|r \right| \le (a/\pi)^{1/2} ]=P[-(a/\pi)^{1/2}\le c \le(a/\pi)^{1/2}]= {F}_{r}(a/\pi)^{1/2}-{F}_{r}-(a/\pi)^{1/2}$
+
+\paragraph{Steps: i)} Differentiate with respect to a to find an equation in terms of the pdf of x.\\ ${f}_{A}(a)=\frac{d}{da}{F}_{R}(a/\pi)^{1/2}-\frac{d}{da}{F}_{R}-(a/\pi)^{1/2}= {f}_{R}[(a/\pi)^{1/2}]\frac{d}{da}(a/\pi)^{1/2} {f}_{R}[-(a/\pi)^{1/2}]\frac{d}{da}-(a/\pi)^{1/2}$
+
+
+\paragraph{Result:} ${ f }_{ A }(a)=\begin{cases} \frac{ 3(\sqrt{\pi}-\sqrt{a}}{\pi^{3/2}} \quad ,\quad 0<a<\pi \\ 0\quad  \quad ,\quad o/w \end{cases}$
