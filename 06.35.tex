@@ -1,0 +1,14 @@
+{\bf 06.35}
+Suppose $X_1, X_2$ are independent exponentially distributed random variables $X_i\sim$EXP($\theta$), and let $Y=X_1-X_2$.\\
+(a) Find the MGF of $Y$.\\
+We can think of $Y=X_1-X_2$ as $Y=X_1+(-1)X_2$. Then using Theorem 6.4.1,
+\begin{eqnarray*}
+M_{Y}(t) & = & (M_{X_1} (t))(M_{-X_2} (t))\\
+M_{Y}(t) & = & (M_{X_1}(t))(M_{X_2}(-t))\\
+M_{Y}(t) & = & \left(\frac{1}{1-\theta t}\right)\left(\frac{1}{1-\theta (-t)}\right)\\
+M_Y(t) &=& \left(\frac{1}{1-\theta t}\right)\left(\frac{1}{1+\theta t}\right)\\
+M_Y(t) & = & \frac{1}{1-\theta t +\theta t-\theta^2 t^2}\\
+M_Y(t) & = & \frac{1}{1-\theta^2 t^2}
+\end{eqnarray*}
+(b) What is the distribution of $Y$?\\
+Since $\frac{1}{1-\theta^2 t^2}$ is the MGF of a double exponential,  $Y\sim$ DE($\theta$,$0$).
