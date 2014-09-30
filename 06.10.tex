@@ -1,0 +1,20 @@
+{\bf 06.10}
+Suppose $X$ has pdf $f_X(x)=\frac{1}{2}}e^{-\left|x\right|} & -\infty<x<\infty$
+\newline
+\newline (a) Find the pdf of $Y = \left|X\right|$.
+\newline CDF Method
+\newline $F_Y(y) = P[Y \leq y] = P[\left|x\right| \leq y] = P[-y \leq X \eq y] = F_X(y)-F_X(-y)$
+\newline $f_Y(y) = \frac{dF_X(y)}{dy} - \frac{dF_X(-y)}{dy}$
+\newline $f_Y(y) = f_X(y)\frac{dy}{dx} - f_X(-y)(\frac{-dy}{dy})$
+\newline $f_y = \frac{1}{2}e^{-y} + \frac{1}{2}e^{-y} = e^{-y}$ $y>0$
+\newline
+\newline (b) Let $W = 0$ if $X \le 0$ and $W = 1$ if $X > 0$. Find the CDF of $W$
+\newline $F_W(w) = P[W = 0] = \frac{1}{2}$
+\newline $F_W(w) = P[W = 1] = \frac{1}{2}$
+\newline $F_W(w) =$
+\[ \begin{cases} 
+      0 & w \leq 0 \\
+      \frac{1}{2} & 0 \leq w \leq 1 \\
+      1 & w > 1
+   \end{cases}
+\]
