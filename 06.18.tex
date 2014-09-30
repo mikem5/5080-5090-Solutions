@@ -1,0 +1,18 @@
+{\bf 6.18}
+It is given that $X$ and $Y$ have a joint pdf given by \begin{equation}f(x,y)=e^{-y} \quad if \quad 0<x<y<\infty. \end{equation} 
+\paragraph{(a): Find the joint pdf of $S=X+Y$ and $T=X$. \\*}
+This can be done using the joint transformation method.  
+By rearranging the above formulas we get $X=T$ and $Y=S-T$.  
+Then it is easy to get the jacobian \begin{equation} J = \left(\begin{array}{cc} 1 & 0 \\ -1 & 1 \end{array}\right) \end{equation}  
+whose determinant is clearly one. 
+Note that the order in which you take partial derivatives is unimportant provided you are consistent - you will get the same determinant either way. Then we substitute in $X=T$ and $Y=S-T$ into the pdf and multiply by the determinant of the jacobian:  
+\begin{equation} f_{S,T}(s,t)=f_{X,Y}(x(s,t),y(s,t))\times 1= \begin{cases}  \begin{array}{lr} e^{t-s} & if \quad  0<t<s/2 \\ 0 & otherwise \end{array}\end{cases}. \end{equation} 
+The bounds of the function can be found in a few different ways.  One way is to consider the bounds of the original function, $0<x<y<\infty$.  We can substitute in the new formulas for $X$ and $Y$ to get \begin{equation} 0<t<s-t<\infty. \end{equation}  Then it is apparent that \begin{equation} 0<2t<s<\infty, \end{equation} which then yields \begin{equation} 0<t<s/2, \end{equation} the bounds of our new function.  
+\paragraph{(b):  Find the marginal pdf of T.\\*} 
+The easiest way to do this is to "integrate out" S from the joint pdf we derived:  
+\begin{equation} \begin{split}f_T(t) & = \int_{-\infty}^{\infty}f_{S,T}(s,t)ds = \int_{2t}^{\infty}e^{t-s}ds \\ 
+&=e^t\int_{2t}^{\infty}e^{-s}ds=e^t(-e^{-s}\rvert^\infty_{2t}) \\ & =e^{-t} \quad if \quad t>0.  \end{split}\end{equation} 
+\paragraph{(c): Find the marginal pdf of S.\\*}
+This is just like part (b), except this time "integrate out" T:
+\begin{equation} \begin{split}f_S(s) & = \int_{-\infty}^{\infty}f_{S,T}(s,t)dt = \int_{0}^{s/2}e^{t-s}ds \\ 
+&=e^{-s}\int_{0}^{s/2}e^{t}dt=e^{-s}(e^{t}\rvert^{s/2}_{0}) \\ & =e^{-s}(e^{s/2}-1) \quad if \quad s>0.  \end{split} \end{equation}\end{document}
