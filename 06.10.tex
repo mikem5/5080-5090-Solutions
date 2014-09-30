@@ -1,9 +1,9 @@
 {\bf 06.10}
-Suppose $X$ has pdf $f_X(x)=\frac{1}{2}}e^{-\left|x\right|} & -\infty<x<\infty$
+Suppose $X$ has pdf $f_X(x)=\frac{1}{2}e^{-\left|x\right|}$ for all real $x$.
 \newline
 \newline (a) Find the pdf of $Y = \left|X\right|$.
 \newline CDF Method
-\newline $F_Y(y) = P[Y \leq y] = P[\left|x\right| \leq y] = P[-y \leq X \eq y] = F_X(y)-F_X(-y)$
+\newline $F_Y(y) = P[Y \leq y] = P[\left|x\right| \leq y] = P[-y \leq X \leq y] = F_X(y)-F_X(-y)$
 \newline $f_Y(y) = \frac{dF_X(y)}{dy} - \frac{dF_X(-y)}{dy}$
 \newline $f_Y(y) = f_X(y)\frac{dy}{dx} - f_X(-y)(\frac{-dy}{dy})$
 \newline $f_y = \frac{1}{2}e^{-y} + \frac{1}{2}e^{-y} = e^{-y}$ $y>0$

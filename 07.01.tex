@@ -1,0 +1,35 @@
+{\bf 07.01} Consider a random sample of size n from a distribution with $CDF F(x) = 1-\frac{1}{x} if 1 \leq x \leq \infty$
+
+\vspace{5mm}
+
+(a)  Derive the CDF of the smallest order statistic, $X_{1 \colon n}$
+
+\vspace{3mm}
+Solution: $G_{1}(y_1) = 1-[1-F_X(y_1)]^n  = 1-[1-[1-\frac{1}{y_1}]]^n = 1-[\frac{1}{y_1}]^n$
+
+\vspace{2mm}
+$G_1(y_1) = \begin{cases} 1-\frac{1}{[y_1]^n} &\mbox{if }  1\leq y_1 \\ 0 &\mbox{if } 0>y_1. \end{cases} $
+
+
+\vspace{10mm}
+(b) Find the limiting distribution of $ X_{1\colon{n}}$
+\vspace{3mm}
+Solution: 
+
+\vspace{2mm}
+$\lim_{n \rightarrow \infty} 1-\frac{1}{{y_1}^n} = \begin{cases} 1 &\mbox{if } y_{1} > 1 \\ 0 &\mbox{if } y_1 \leq 1 \end{cases}$
+
+\vspace{2mm}
+The limiting distribution of $X_{1\colon n}$ is degenerate at $y = 1$
+
+\vspace{10mm}
+(c) Find the limiting distribution of ${X^n}_{1\colon n}$
+
+\vspace{3mm}
+Solution:
+
+\vspace{2mm}
+$F_{{X^n}_1\colon n} (y) = P({X^n}_{1\colon n} \leq y) = P(X_{1\colon n} \leq y^{\frac{1}{n}}) = F_{X_{1\colon n}} (y^{\frac{1}{n}}) = 1-\frac{1}{{y^\frac{1}{n}}^n} = 1 - \frac{1}{y_n}$
+
+\vspace{2mm}
+then, the limiting distribution of ${X^n}_{1\colon n} = \begin{cases} 1- \frac{1}{y_n} &\mbox {if } y >1 \\ 0 &\mbox {if } otherwise \end{cases}$
