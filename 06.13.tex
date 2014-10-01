@@ -1,24 +1,32 @@
 {\bf 06.13}
-\\ X has pdf $ f(x)= $
+X has pdf 
+\begin{equation*}
+f(x)= 
 \begin{dcases}
      \frac{x^{2}}{24} & -2<x<4 \\
      0 				  & \text{otherwise}
-\end{dcases} 
-\\
-\\
-\\ \text{Want pdf of} $ Y=X^{2} $ 
-\\ \text{Regions:} $ (-2,0) & \ \ \ \ [0,4) $
-\\ \[ F_{x}(\sqrt{y})-F_{x}(-\sqrt{y}) \]
-\[ f_{x}(\sqrt{y})(\frac{1}{2}\sqrt{y})-f_{x}(-\sqrt{y})(-\frac{1}{2}\sqrt{y}) \]
-\\ \[ f_{y}(y)= 
+\end{dcases}
+\end{equation*}
+We want pdf of the CDF $ Y=X^{2} $ 
+with regions: $ (-2,0) \cup [0,4) $
+\begin{equation*}
+\left[ F_{x}(\sqrt{y})-F_{x}(-\sqrt{y}) \right]  = 
+\left[ f_{x}(\sqrt{y})(\frac{1}{2}\sqrt{y})-f_{x}(-\sqrt{y})(-\frac{1}{2}\sqrt{y}) \right] \\
+\end{equation*}
+\begin{equation*}
+\begin{split}
+f_{y}(y) & = 
 \begin{dcases}
 	\frac{y}{48\sqrt{y}}+\frac{y}{48\sqrt{y}} & 0<y<4 \\
 	\frac{y}{48\sqrt{y}}                      & 4 \leq y \leq 16 \\
-	0                                         & \text{otherwise} \]
+	0                                         & \text{otherwise} 
 \end{dcases}
-\\ \[ f_{y}(y)=
+\\
+f_{y}(y) & =
 \begin{dcases}
 	\frac{\sqrt{y}}{24}                      & 0<y<4 \\
 	\frac{\sqrt{y}}{48}                      & 4 \leq y \leq 16 \\
-	0                                        & \text{otherwise} \]
+	0                                        & \text{otherwise} 
 \end{dcases}
+\end{split}
+\end{equation*}
