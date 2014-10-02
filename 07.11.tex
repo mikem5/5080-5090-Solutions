@@ -1,0 +1,31 @@
+{\bf 07.11} \quad  
+a) First we need to know the $\mu$ and the $\sigma$. For a Uniform variable with $a = 0, b = 1$ we have
+$\mu = 1/2$ and $\sigma = 1/\sqrt{12}$ (Note: it is not $\sigma^2$). We also need to know that $n = 20$ 
+from there we can use the CLT: 
+
+
+\begin{equation*}
+\begin{split}
+	\Pr\left( \sum^{20} X_{i} < 12\right)  & = \Pr\left(\frac{\sum X_{i} - 10}{\sqrt{20} \frac{1}{\sqrt{12}}} < \frac{12 - 10}{\sqrt{20} \frac{1}{\sqrt{12}}}\right) \\
+		& = \Phi \left( \frac{12 - 10}{\sqrt{20} \frac{1}{\sqrt{12}}}\right) \\
+		& \approx .9394 \\
+\end{split}
+\end{equation*}
+\\
+b) We let $Y = \sum^{20} X_{i}$, let $Y'$ be our 90th percentile that we want to find. So we setup our probability as $\Pr (Y \leq Y') = .9$, $.9$ as we are interested in the 90th percentile. Using $\mu$, $\sigma$, and $n$ from part (a) we solve with CLT: \\
+\begin{equation*}
+\begin{split}
+	\Pr\left( Y \leq Y' \right) & =
+	\Pr\left( \frac{Y - \mu n}{\sigma \sqrt{n}} \leq \frac{Y' - \mu n}{\sigma \sqrt{n}} \right) \\
+	& = \Pr \left( Z \leq \frac{Y' - 10}{\sqrt{20} \frac{1}{\sqrt{12}}}\right) \text{Note: Z is standard normal due to CLT} \\
+	.9 &=	\Phi \left( \frac{Y' - 10}{\sqrt{20} \frac{1}{\sqrt{12}}}\right) \\
+\end{split}
+\end{equation*}
+We now solve for $Y'$. We know (from a chart or list) that $.9$ from $\Phi$ is $z \approx 1.285$.
+So we set our final equation for finding out $Y'$ with that in mind.
+\begin{equation*}
+\begin{split}
+	\frac{Y' - 10}{1.291} & = 1.285 \\
+	Y'  & \approx 11.658\\
+\end{split}
+\end{equation*}
