@@ -1,0 +1,20 @@
+{\bf 6.21}
+Let $X$ and $Y$ be continuous random variables with a joint density function given by 
+\begin{equation} f_{X,Y}(x,y)=2(x+y) \quad if \quad 0<x<y<1 \quad and\quad 0 \quad otherwise. \end{equation}
+\paragraph{(a) Find the joint density function of $S=X$ and $T=XY$. \\*} 
+We can solve for $X$ and $Y$ in terms of the new variables, to get $X=S$ and $Y=T/S$.  Then the jacobian is given by 
+\begin{equation} J=\left(
+\begin{array}{cc} 1 & 0 \\ -T/S^2 & 1/S \end{array}\right). \end{equation}
+Then the new pdf is given by 
+\begin{equation} f_{T,S}(s,t)=f_{X,Y}(x(s,t),y(s,t))\times |1/s| = \begin{cases}
+\begin{array}{lc} 2(s+t/s)\left|1/s\right|, & 0<s^2<t<s<1 \\ 
+0 & otherwise. \end{array} \end{cases} \end{equation}
+The bounds of this equation can be interpreted in the following way:  the old triangular region in the $xy$ plane got transformed to the region in the $st$ plane between the lines $T=S$ and $T=S^2$. 
+\paragraph{(b) Find the marginal pdf of T. \\*}
+To find the marginal of $T$, s needs to be "integrated out." 
+\begin{equation}\begin{split}  f_T(t)=\int_{-\infty}^{\infty}f_{S,T}(s,t)ds \\ 
+= \int_{t}^{\sqrt{t}}2(s+t/s)\left|1/s\right|ds
+&= \int_{t}^{\sqrt{t}}2(1+t/s^2)ds \\
+=2\int_{t}^{\sqrt{t}}ds+2t\int_{t}^{\sqrt{t}}1/s^2ds
+&=2(\sqrt{t} -t)+2t(-1/s\rvert^{\sqrt{t}}_{t}\\ 
+=2\sqrt{t} -2t +2 -2\sqrt{t} &= \begin{cases} \begin{array} {lc} 2-2t & t \in (0,1)\\ 0 & otherwise. \end{array} \end{cases} \end{split} \end{equation}.
