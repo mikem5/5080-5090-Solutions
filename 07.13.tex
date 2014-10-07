@@ -1,0 +1,8 @@
+{\bf 07.13} \quad From the hint we know that $Y_{n} = \sum^{n} X_{i}$ where $X_{i} \sim Geo(p)$. So for
+$\sum^{n} X_{i}$ the $\mu = \frac{n}{p}$ and $\sigma^2 = \frac{nq}{p^2}$. Then by the CLT:
+\begin{align*}
+	\Pr \left( Y_{n} \leq y \right) & = \Pr \left( \sum^{n} X_{i} \leq y \right) \\
+	& =  \Pr \left( \frac{\sum^{n} X_{i} - \frac{n}{p} n}{\sqrt{n} \sqrt{\frac{nq}{p^2}}}   \leq 
+		\frac{y - \frac{n}{p} n}{\sqrt{n} \sqrt{\frac{nq}{p^2}}} \right) \\
+	& = \Phi \left(	\frac{y - \frac{n}{p} n}{\sqrt{n} \sqrt{\frac{nq}{p^2}}} \right) \\
+\end{align*}

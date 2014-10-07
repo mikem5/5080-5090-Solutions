@@ -1,0 +1,20 @@
+{\bf 07.16} \quad a) We need two things for this proof. First, we need to know $\mu$ and $\sigma^2$ of $\overline{X}$.
+We know this is $\mu = \mu$ and $\sigma^2 = \frac{\mu^2}{n}$ from facts of the sample mean distribution of $POI(\mu)$.
+Next the theorems from section 7.6, namely 7.6.2 and from 7.7, 7.7.2. These will let us prove the following:\\
+\begin{align*}
+	\Pr \left[ | \overline{X_{n}} - \mu | < \epsilon \right] & \geq 1 - \frac{\mu^2}{\epsilon^2 n} \\
+	\lim_{n \to \infty} \Pr \left[ | \overline{X_{n}} - \mu | < \epsilon \right] & = 1 \\
+\end{align*}
+From this we now know that $\overline{X} \overset{P}{\to} \mu$ from 7.6.3. For our goal, $e^{\overline{X_{n}}}$ we 
+simply need to know 7.7.2. Since $\overline{X} \overset{P}{\to} \mu$ then $e^{\overline{X}} \overset{P}{\to} e^{\mu}$ \\
+
+b) It has been shown elsewhere in the text that any $\overline{X_{n}}$ will converge to $N(0,1)$ if standardized. The
+theorem we need to use then, is 7.7.6 which states that a function of an already convergent series also converges
+to an asymptotic normal distribution. (For an almost direct example see Example 7.7.3)\\
+
+Our $g(y)$ here is $e^{-\overline{X_{n}}}$ where $g(y) = e^y$. So then $g'(y) = -e^{-y}$ and using 7.7.6 we can find
+our distribution if $\frac{d}{d\mu} e^{-\mu} = -e^{-\mu}$ then $N(e^\mu , \frac{-e^{-2\mu} \mu^2}{n})$ \\
+
+c) From parts (a) we know that $\overline{X_{n}} \overset{P}{\to} \mu$ and $e^{\overline{-X}} \overset{P}{\to} e^{-\mu}$.
+So we can use theorem 7.7.3 via section (2), which states that $X_{n} Y_{n} \overset{P}{\to} cd$. In our case we have
+the prior two found distributions. So then by the theorem $\overline{X_{n}} e^{\overline{X_{n}}} \overset{P}{\to} \mu e^{-\mu}$ \\
