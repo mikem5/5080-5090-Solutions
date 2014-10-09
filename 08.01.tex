@@ -1,0 +1,9 @@
+{\bf 08.01} \quad $X_{i} \sim N(101,4)$ so then $\mu = 101$ and $\sigma^2 = 4$ or $\sigma = 2$. We just use the CLT to
+solve this: \\
+\begin{align*}
+	\Pr \left( \text{20 bags will weigh at least 1 ton} \right) & = \Pr \left( \sum^{20} X_{i} \geq 2000 \right) \\
+	& = \Pr \left( \frac{\sum^{20} X_{i} - 2020}{2 \sqrt{20} } \geq \frac{2000 -2020}{2 \sqrt{20} } \right) \\
+	& = 1 - \Phi \left( -2.23 \right) \\
+	& \approx 0.987 \\
+\end{align*}
+\\
