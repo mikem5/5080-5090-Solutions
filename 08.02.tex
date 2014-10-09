@@ -1,0 +1,23 @@
+{\bf 08.02} a) Since both $S$ and $B$ are normal variables we may transform them, via theorem 8.3.1 into
+a new normal variable. The values we need are $\mu$ and $\sigma$ of both $S$ and $B$. For $S$ we have $\mu = 1$, 
+$\sigma^2 = .0004$, for $B$ $\mu = 1.01$ and $\sigma^2 = .0009$. For the question, we want the probability that $S > B$
+so in other words $\Pr ( S - B > 0)$. This means $S - B = Y$ is a new normal variable (by theorem), with values $\mu = -.01$
+and $\sigma^2 = .0013$. We will use the CLT to solve the probability, so we need $\sigma = .036$. Using that we
+solve: \\
+\begin{align*}
+	\Pr \left( S - B > 0 \right) & = \Pr \left( Y > 0 \right) \\
+	& = \Pr \left( \frac{Y - (-.01)}{.036} > \frac{0 - (-.01)}{.036} \right) \\
+	& = \Phi \left( \frac{.01}{.036} \right) \\
+	& \approx 0.39  \\
+\end{align*}
+b) We now assume that for $S$ and $B$ that $\sigma^2$ are identical for each, but unknown. We do know our desired
+probability, $.95$ so we will solve for that instead. Very similar in approach to part (a), we just solve for
+$\sigma$ now. Important fact is that the $N(-.01, \sigma^2 + \sigma^2) = N(-.01, 2\sigma^2)$ so $\sigma = \sigma\sqrt{2}$ \\
+\begin{align*}
+	\Phi \left( \frac{.01}{\sigma\sqrt{2}} \right) &= .95 \\
+\end{align*} 
+So we find the value in our table, $1.65$ and solve for $\sigma$ \\
+\begin{align*}
+	\frac{.01}{\sigma\sqrt{2}}  &= 1.65 \\
+	& \approx .00428 
+\end{align*}
