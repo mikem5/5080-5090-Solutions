@@ -1,0 +1,25 @@
+{\bf 08.05} a) We can find the distribution by use of moment generating functions. Since $\sum^{10} T$ then we
+have $M_{\sum^{10} T} (t)$. Evaluating this out will lead as follows:
+\begin{align*}
+	M_{\sum^{10} T} (t) & = E \left( e^{t \sum^{10} T} \right) \\
+	& = \prod^{10} E \left( e^{ t T_{i}} \right) \\
+	& = \left( \frac{1}{1-100t} \right)^{10} \\
+\end{align*}
+Which is known to be a gamma random variable with parameters $GAM(100,10)$ \\
+
+b) Let $X \sim GAM(100,10)$.
+We need to find $\Pr \left( X \geq 548 \right)$ as the days in 1.5 years is $548$. By using our hint we transform
+this probability into one in which we are able to find readily (by use of a table). \\
+
+\begin{align*}
+	\Pr \left( X \geq 548 \right) & = \Pr \left( \frac{2 X}{100} \geq \frac{2 * 548}{100} \right) \\
+	& = \Pr \left( \chi^2 \geq \frac{548}{50} \right) \\
+\end{align*}
+Since our $\nu = 20$ we find that our probability is $1 - .05 = .95$ \\
+
+c) For two years, ie $730$ days, we need to find $\Pr \left( X \geq 730 \right) = .95$. All of our solutions
+rely on finding a needed quantity in a table. We are solving for the $\kappa$ of our $GAM(100,\kappa)$ variable.
+So we get our percentile as $\frac{730}{50} = 14.6$ then using either table 4 or table 5, we find that for the
+$.05$ percent we need a $\nu \approx 24$. Actually a little less, but due to the fact we are parts, $24$ is
+needed. Then our $\kappa = \frac{\nu}{2} = 12$
+\\

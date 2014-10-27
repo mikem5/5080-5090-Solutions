@@ -1,0 +1,10 @@
+{\bf 08.10} We have $n = 15$. With $\overline{X} = \frac{\sum^{15} Y_{i}}{15}$ where $Y \sim EXP(\theta)$ we have
+in fact $\frac{Z}{15}$ where $Z \sim GAM(\theta,15)$. So to solve our probability, we proceed as follows: \\
+
+\begin{align*}
+	\Pr \left( \frac{c Z}{15} \leq \theta \right) & = \Pr \left( 15 c Z  \leq 15 \theta \right) \\
+	& = \Pr \left( \frac{ 2 c Z }{\theta} \leq \frac{15 \theta 2}{\theta} \right) \\
+	& = \Pr \left( \frac{ 2 Z }{\theta} \leq \frac{30}{c} \right) \\
+\end{align*}
+We now transform $\frac{ 2 Z }{\theta} \sim \chi^2 (30)$. For the probability of $.95$ we look in our table and
+find that for $\kappa = 30$ we need a $\gamma = 43.77$ so then $\frac{30}{c} = \gamma = 43.77$ and then $c = .685$
