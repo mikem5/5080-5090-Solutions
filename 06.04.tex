@@ -1,0 +1,22 @@
+\par\noindent {\bf 06.04} \textit{Please double check the results of this solution} \\
+For $X \sim WEI(\theta, \beta)$ we have the CDF as $F_X = 1 - e^{\frac{x}{\theta}^{\beta}}$ and the pdf is $f(x) = \frac{\beta}{\theta^{\beta}} x^{\beta - 1} e^{- \frac{x}{\theta}^{\beta}}$ \\
+a) We make the transformation by the CDF method: \\
+\begin{align*}
+	\Pr \left( Y \leq y \right) & = \Pr \left( \frac{X}{\theta}^{\beta} \leq y \right) \\
+	& = \Pr \left( X \leq \theta y^{\frac{1}{\beta}} \right) \\
+	& = F_{X} \left( \theta y^{ \frac{1}{\beta}} \right) \\
+	& = 1 - e^{ - \frac{\theta y^{ \frac{1}{\beta}}}{\theta}^{\beta}} \\
+	& = 1 - e^{-y} , \text{ where } 0 < y 
+\end{align*}
+So we have our CDF. For the pdf we simply take the derivative of the above. So $pdf = e^{-y}$ where $0 < y$ \\
+
+b) $W = \ln X$. Again, the most simply method to get the CDF, and in turn the pdf is the CDF method. \\
+\begin{align}
+	\Pr \left( W \leq w \right) & = \Pr \left( \ln X \leq w \right) \\
+	& = \Pr \left( X \leq e^{w} \right) \\
+	& = F \left( e^{w} \right) \\
+	& = 1 - e^{ - \frac{e^{w}}{\theta}^{\beta}} \text{ where } 0 < w \\
+\end{align} 
+Again we simply differentiate to get the pdf. which turns out to be $\beta e^{\beta w} \theta^{- \beta} e^{ - \frac{e^{w}}{\theta}^{\beta}}$, $0 < w$\\
+c) 
+	
