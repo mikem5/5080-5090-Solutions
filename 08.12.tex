@@ -1,0 +1,20 @@
+
+
+{\bf 08.12} Since $X_1$ and $X_2$ are $\sim N(0,25)$ we know that being squared they are "close" to the $\chi^2$
+distribution. So our goal in finding the probability will be to rework $D$ into something involving $\chi^2$.
+First, since $D = \sqrt{X^2_1 + X^2_2}$ we will get rid of the square root. \\
+\begin{align*}
+	\Pr \left( \sqrt{X^2_1 + X^2_2} \leq 12.25 \right) & = 	\Pr \left( X^2_1 + X^2_2 \leq (12.25)^2 \right) \\
+\end{align*}
+Since $X^2 = (X - 0)^2$ and since $\mu = 0$ we can rework the remaining distribution into a $\chi^2$ as follows
+\begin{align*}
+	\Pr \left( X^2_1 + X^2_2 \leq (12.25)^2 \right) & = \Pr \left( (X - \mu)^2  + (X^2- \mu)^2 \leq (12.25)^2  \right) \\
+	& = \Pr \left( \frac{(X - \mu)^2  + (X- \mu)^2}{\sigma^2} \leq \frac{(12.25)^2 }{\sigma^2} \right) \\
+	& = \Pr \left( \sum^{2}\frac{(X - \mu)^2}{\sigma^2} \leq \frac{(12.25)^2 }{\sigma^2} \right) \\
+	& = \Pr \left( \sum^{2}\frac{(X - 0)^2}{25} \leq \frac{(12.25)^2 }{25} \right) \\
+	& = \Pr \left( \chi^2 (2) \leq \frac{(12.25)^2}{25} \right) \\
+	& = \Pr \left( \chi^2 (2) \leq  6 \right) \\
+\end{align*}
+Using a table we find this probability to be $\approx .95$
+
+
