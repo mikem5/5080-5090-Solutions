@@ -1,0 +1,25 @@
+
+
+{\bf 08.13} a) We just convert the $\overline{X}$ to standard normal, and evaluate. 
+$\Pr \left( \frac{ \overline{X} - 0}{\frac{1}{4}} \leq \frac{\frac{1}{2} - 0}{\frac{1}{4}} \right) $ which
+we see is then $\Phi \left( 2 \right)$ \\
+
+b) Let $Y = Z_1 - Z_2$ then $Y \sim N(0,2)$. Thus $ \Pr \left( \frac{Y}{\sqrt{2}} \leq \frac{2}{\sqrt{2}} \right)$
+which is $\Phi \left( 1.41 \right) \approx .921$ \\
+
+c) By theorem, this is the same as part (b) as our $Y = X_1 + X_2$ is still $Y \sim N(0,2)$ \\
+
+d) By theorem corollary 8.3.2, $\sum^{16} Z^{2} \sim \chi^2 (16)$ as our $\mu = 0$ and $\sigma^2 = 1$.
+So then $\Pr \left( \chi^2 (16) \leq 32 \right) \approx .99$ \\
+
+e) We want to use theorem 8.3.6 part 3. First we divide both by $n-1$ to get $S^2$. 
+Next we will multiply both sides by $n-1$ and divide by $\sigma^2$ which
+will give us a distribution of $\chi^2 (15)$. 
+\begin{align*}
+	\Pr \left( \sum^{16} (X - \overline{X})^2 \leq  25 \right) &= 
+			\Pr \left( \frac{15 \sum^{16} (X - \overline{X})^2}{(15)(1)}  \leq \frac{15 * 25}{15 * 1} \right) \\
+	& =  \Pr \left( \chi^2 (15) \leq 25 \right) \\
+\end{align*}
+Which we find to be $\approx .95$
+
+

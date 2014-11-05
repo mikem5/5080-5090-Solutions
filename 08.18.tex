@@ -1,0 +1,38 @@
+
+
+{\bf 08.18} a) By theorem 8.3.4 we know that $V_1 + V_2 = \chi^2 (14)$ Thus our result, via table, is $\approx .144$ \\
+
+b) By definition of the $t$ distribution $\frac{Z}{\sqrt{\frac{V_1}{5}}} \sim t(5)$. By table the probability is then $.95$ \\
+
+c) We need to make the distribution a $t$ distribution. We need to divide by our $V_2$ and multiply by $\sqrt{9}$ to get
+the form we need for the $t$. Thus: \\
+\begin{align*}
+	\Pr \left( Z \geq .611 \sqrt{V_2} \right) & = \Pr \left( \frac{Z}{\sqrt{\frac{V_2}{9}}} \geq 3 * .611 \right) \\
+	& = \Pr \left( t(9) \geq 1.83 \right) \\
+	& = 1 - .95 = .05 \\
+\end{align*}
+
+d) If we multiply both sides by a $\frac{9}{5}$ we will get an $F$ distribution which we can use a table to calculate
+the result. Thus, $\Pr ( F(5,9) \leq 2.61 ) = .9$
+
+e) We can convert this to an $F$ distribution with a little work: \\
+\begin{align*}
+	\Pr \left( \frac{V_1}{V_1 + V_2} \leq b \right) & = \Pr \left( \frac{V_1 + V_2}{V_1} \geq \frac{1}{b} \right) \\
+	& = \Pr \left( 1 + \frac{V_2}{V_1} \geq \frac{1}{b} \right) \\
+	& = \Pr \left( \frac{V_2}{V_1} \geq \frac{1}{b} - 1 \right) \\
+	& = \Pr \left(\frac{5}{9} \frac{V_2}{V_1} \geq \frac{5}{9}\left(\frac{1}{b} - 1 \right)\right) \\
+	& = \Pr \left(F(9,5) \geq \frac{5}{9}\left(\frac{1}{b} - 1 \right)\right) \\
+	& = \Pr \left(F(9,5) \geq \frac{5}{9}\left(\frac{1}{b} - 1 \right)\right) \\
+\end{align*}
+We now find our value for an $F(9,5) = .90$ which turns out to be $2.61$. We must take the inverse of this
+since we are $\geq$ and our table is in a format for $\leq$. We now set that equal to our percentile
+and solve for $b$. \\
+\begin{align*}
+	\frac{1}{2.61} & = \left(\frac{5}{9}\left(\frac{1}{b} - 1 \right)\right) \\
+	\frac{9}{5}\frac{1}{2.61} + 1 & = \frac{1}{b} \\
+	b & \approx 5.92 \\
+\end{align*}
+
+
+
+
