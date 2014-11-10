@@ -1,0 +1,21 @@
+
+\bf{Problem 9.21}
+\\
+\\ \text{Consider a random sample of size n from a Bernoulli distribution,} $X_{i}$ \text {is approximately} $BIN(1,p)$
+\\
+\\ \text{a) find the CRLB for the variances of unbiased estimators of p.}
+\\ \[f(x;p)=p^{x}(1-p)^{1-x}\]
+\\ \[ ln(f(x;p)) = xln(p)+(1-x)ln(1-p) \]
+\\ \[ (ln(f(x;p)))' = \dfrac{x}{p} - \dfrac{1-x}{1-p} = \dfrac{x-p}{p(1-p)} \]
+\\ \[ E(((ln(f(x;p)))')^{2}) = E((\dfrac{x-p}{p(1-p)})^{2}) = \dfrac{1}{(p(1-p))^{2}}E((x-p)^{2}) = \dfrac{E(x^{2}-2px+p^{2})}{(p(1-p))^{2}} = \dfrac{p(1-p) +p^{2}-2p^{2}+p^{2}}{(p(1-p))^{2}} = \]
+\\\[ \dfrac{1}{p(1-p)} \]
+\\ \[  CLRB = \dfrac{(p')^{2}}{n(\dfrac{1}{p(1-p)})} = \dfrac{p(1-p)}{n} \]
+\\
+\\ \text{b) Find the CRLB for the variances of unbiased estimators of p(1-p).}
+\\ \[ (p(1-p))' = 1-2p \]
+\\ \[ E(((ln(f(x;p)))')^{2}) = \dfrac{1}{p(1-p)} \]
+\\ \[ CLRB = \dfrac{(1-2p)^{2}}{n(\dfrac{1}{p(1-p)})} = \dfrac{p(1-p)(1-2p)^{2}}{n} \]
+\\
+\\ \text{c) Find a UMVUE of p.}
+\\ \[ Var(\bar{x}) = \dfrac{p(1-p)}{n} \]
+\\ \text{This is the same as the CRLB for p, thus,} $\bar{x}$ \text{is a UMVUE of p}
