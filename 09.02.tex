@@ -1,24 +1,35 @@
 
-\bf{9.2} Find Methods of Moments Estimators based on a random sample of size n.
-\noindent a) ${ X }_{ i }\sim NB(3,p)$\\
-${ \mu  }_{ 1 }^{ ' }= r/p = 3/p = \overline { X } $\\
+{\bf 9.2} Find Methods of Moments Estimators based on a random sample of size n. \\
+
+a) ${ X }_{ i }\sim NB(3,p)$\\
+${ \mu  }_{ 1 }^{ ' }= \frac{r}{p} = \frac{3}{p} = \overline { X } $\\
 $\hat { p } = \frac{3}{\overline { X }}$\\
-\noindent b) ${ X }_{ i }\sim Gam(2,k)$\\
+
+
+b) ${ X }_{ i }\sim Gam(2,k)$\\
 ${ \mu  }_{ 1 }^{ ' }= k\theta = 2k = \overline { X } $\\
 $\hat { k } = \frac{\overline { X }}{2}$\\
-\noindent c) ${ X }_{ i }\sim Wei(\theta,1/2)$\\
+
+
+c) ${ X }_{ i }\sim Wei(\theta,1/2)$\\
 ${ \mu  }_{ 1 }^{ ' }= \theta \Gamma (1+\frac { 1 }{ \beta  } ) = \theta \Gamma (1+\frac { 1 }{ 1/2  } ) = \theta \Gamma (3) = \theta(3-1)! = 2\theta = \overline{X}  $\\
 $\hat { \theta } = \frac{\overline { X }}{2}$\\
-\noindent d) ${ X }_{ i }\sim DE(\theta,\eta)$\\
+
+
+d) ${ X }_{ i }\sim DE(\theta,\eta)$\\
 ${ \mu  }_{ 1 }^{ ' }= \eta = \overline{X}  $\\
 ${ \mu  }_{ 2 }^{ ' }= \sigma^{2}+\mu^{2} = 2\theta^{2}+\eta^{2}$\\
 $ \hat{\theta}= \sqrt{\frac{2\theta^{2}+\eta^{2}-\overline{X}^{2}}{2}}=\frac{\hat{\sigma}}{\sqrt{2}}$\\
-\noindent e) ${ X }_{ i }\sim EV(\theta,\eta)$\\
+
+
+e) ${ X }_{ i }\sim EV(\theta,\eta)$\\
 ${ \mu  }_{ 1 }^{ ' }= \eta - \gamma \theta = \overline{X}  $\\
 ${ \mu  }_{ 2 }^{ ' }= \sigma^{2}+\mu^{2} = \frac{\pi^{2}\theta^{2}}{6} + (\eta - \gamma \theta)^{2}$\\
 $ \hat{\theta}= \frac{\sqrt{6}}{\pi}\hat{\sigma}$\\
 $ \hat{\eta}= \overline{X}+\gamma(\frac{\sqrt{6}}{\pi})\hat{\sigma}$\\
-\noindent f) ${ X }_{ i }\sim Par(\theta,k)$\\
+
+
+f) ${ X }_{ i }\sim Par(\theta,k)$\\
 ${ \mu  }_{ 1 }^{ ' }= \frac{\theta}{(k-1)} = \overline{X}$\\
 ${ \mu  }_{ 2 }^{ ' }= \sigma^{2}+\mu^{2} = \frac{\theta^{2}k}{[(k-2)(k-1)^{2}]}+\frac{\theta^{2}}{(k-1)^{2}}$\\
 $ \frac{\hat{k}}{\hat{k}-2}=\frac{\hat{\sigma^{2}}}{\overline{X}^{2}} \rightarrow \frac{\frac{2\sigma^{2}}{\overline{X}^{2}}}{\frac{\sigma^{2}}{\overline{X}^{2}-1}}$\\
