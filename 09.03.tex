@@ -1,0 +1,23 @@
+\bf{9.3} Find MLEs for the following pdfs.
+\noindent a) $f(x;\theta )=\begin{cases} \theta { x }^{ \theta -1 }\qquad 0<x<1 \\ 0\qquad otherwise \end{cases}$\\
+
+$L=\theta^{n} (x_{1}...x_{n})^{ \theta -1}$\\
+$lnL=nln\theta+(\theta-1)(lnx_{1}...lnx_{n})$\\
+$\frac{d}{d\theta}lnL=\frac{n}{\theta}+(lnx_{1}...lnx_{n})=0$\\
+$\hat{\theta}=\frac{-n}{(lnx_{1}...lnx_{n})}$
+
+
+
+\noindent b) $f(x;\theta )=\begin{cases} (\theta +1) { x }^{  -\theta -2 }\qquad 1<x \\ 0\qquad otherwise \end{cases}$\\
+
+$L=(\theta+1)^{n} (x_{1}...x_{n})^{ -\theta -2}$\\
+$lnL=nln(\theta+1)-(\theta+2)(lnx_{1}...lnx_{n})$\\
+$\frac{d}{d\theta}lnL=\frac{n}{(\theta+1)}-(lnx_{1}...lnx_{n})=0$\\
+$\hat{\theta}=\frac{n}{(lnx_{1}...lnx_{n})}-1$
+
+\noindent c) $f(x;\theta )=\begin{cases} \theta^{2} x{ e }^{ -\theta x }\qquad 0<x<1 \\ 0\qquad otherwise \end{cases}$\\
+
+$L=\theta^{2n}(x_{1}...x_{n})e^{-\theta(x_{1}...x_{n})}$\\
+$lnL=2nln\theta+lnx_{1}+...+lnx_{n}-\theta(x_{1}+...+x_{n})$\\
+$\frac{d}{d\theta}lnL= \frac{2n}{\theta}-(x_{1}...x_{n})=0$\\
+$\hat{\theta}=\frac{2}{\overline{X}}$
