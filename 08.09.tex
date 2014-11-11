@@ -1,10 +1,15 @@
-\bf{Problem 8.9}
-\\
-\\ \text{Suppose that} $X$ \text {is approximately} $\chi^{2}(m)$ \text{and} $S = X+Y$ \text {is approximately} $ \chi^{2}(m + n)$ \text {and X and Y are independent. Use MGFs to show that} $S-X$ \text {is approximately} $\chi^{2}(n)$
-\\
-\\ \[ M_{x}(t) = (1-2t)^{\dfrac{-m}{2}}\]
-\\ \[ M_{s}(t) = (1-2t)^{\dfrac{-(m+n)}{2}} \]
-\\ \[ M_{s}(t) = M_{x}(t)M_{y}(t) \]
-\\ \[ M_{y}(t) = \dfrac{M_{s}(t)}{M_{x}(t)} = \dfrac{(1-2t)^{\dfrac{-(m+n)}{2}}}{(1-2t)^{\dfrac{-m}{2}}} = (1-2t)^{\dfrac{-n}{2}} \]
-\\ \text {which is the MGF of} $\chi^{2}(n)$
-\\ \text {Thus} $ Y=S-X $ \text {is approximately} $\chi^{2}(n)$.
+
+{\bf Problem 8.9}
+Suppose that $X$ is approximately $\chi^{2}(m)$ and $S = X+Y$ is approximately $ \chi^{2}(m + n)$
+and X and Y are independent. Use MGFs to show that $S-X$ is approximately $\chi^{2}(n)$:\\
+
+First we have $M_{x}(t) = (1-2t)^{\frac{-m}{2}}$ and $M_{s}(t) = (1-2t)^{\frac{-(m+n)}{2}}$.
+With these then we can get our MGF of interest, so $M_{s}(t) = M_{x}(t)M_{y}(t)$, finally then: \\
+\begin{align*}
+	M_{y}(t) & = \frac{M_{s}(t)}{M_{x}(t)} \\ 
+	& = \frac{(1-2t)^{\frac{-(m+n)}{2}}}{(1-2t)^{\frac{-m}{2}}} \\
+	& = (1-2t)^{\frac{-n}{2}} \\
+\end{align*}
+which is the MGF of $\chi^{2}(n)$ 
+Thus $ Y=S-X $ is approximately $\chi^{2}(n)$.\\
+
