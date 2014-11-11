@@ -1,40 +1,79 @@
-{\bf 8.03}
-3a.\\*
-We know that\\
-\indent$E(\bar{X})= \mu and E(S^{2})= \sigma ^{2} . $\\*
-Therefore,\\
-\indent$ E(2\bar{X}-5S^{2})= 2\mu - 5\sigma ^{2} .$\\
-\\
-Now we write things in terms of U and W:\\
-\indent$ \bar{X}= \frac{U}{n}$\\
+
+{\bf Problem 8.3}
+Let $ X_{1}, X_{2},...,X_{n} $ be a random sample of size n from a normal distribution, $ X_{i} $ 
+is appoximately $ N(\mu,\sigma^{2}), $ and define $ U = \sum\limits_{i=1}^n X_{i} $ and $ W = \sum\limits_{i=1}^n X_{i}^{2} $
 
 
-By properties of (8.2.8),\\
-\indent$ S^{2}= \frac{W- \frac{1}{n} U^{2}}{n-1}= 
-\frac{nW-U^{2}}{n(n-1)} .$\\
+a) Find a statistic that is a function of U and W and unbiased for the parameter $ \theta = 2\mu-5\sigma^{2} $: \\
+First we find for $\mu$
+\begin{align*}
+	 \mu & = E(\bar{x}) \\
+	 & =E(\frac{\sum\limits_{i=1}^n X_{i}}{n}) \\
+	 & =\frac{1}{n}E(U) \\
+\end{align*}
+Then find for $\sigma^2$\\
+\begin{align*}
+	\sigma^{2} & = E(S^{2}) \\ 
+	& = E (\frac{\sum\limits_{i=1}^n X_{i}^{2} - n\bar{x}^{2})}{n-1}) \\ 
+	& = \frac{1}{n-1}E(W-n(\frac{(\sum\limits_{i=1}^n X_{i})^{2}}{n^{2}}) \\
+	& = \frac{1}{n-1}E(W-\frac{U^{2}}{n}) \\ 
+	& = E(\frac{1}{n-1}(W-\frac{U^{2}}{n})) \\
+\end{align*}
+thus
+\begin{align*} 
+	\theta & = 2\mu-5\sigma^{2} \\
+	& = 2(\frac{1}{n}E(U))-5E(\frac{1}{n-1}(W-\frac{U^{2}}{n})) \\ 
+	& = E(\frac{2}{n}(U) - \frac{5}{n-1}(W-\frac{U^{2}}{n})) \\ 
+	& = \frac{2U}{n}-\frac{5}{n-1}(W-\frac{U^{2}}{n}) \\
+\end{align*}
+which is an unbiased estimator for $ \theta $ \\
 
-Therefore,\\
-\indent$E(\underbrace{\frac{2U^{2}}{n}- 
-\frac{5nW-5U^{2}}{n(n-1)}}_{unbiased estimator of 2\mu - 5\sigma ^{2} })= 
-2\mu - 5\sigma ^{2}.$\\
-\\*
-3b.\\
+b) Find a statistic that is unbiased for $\sigma^{2}+\mu^{2} $  \\
+\begin{align*}
+	\mu & = E(\frac{\sum\limits_{i=1}^n X_{i}}{n}) \\
+\end{align*}
 
-We note that\\
-\indent$E(X_{1}^{2})=\ldots E(X_{n}^{2})= \sigma ^{2}+ \mu ^{2}. 
-$\\
+\begin{align*}
+	\mu^{2} & = (E(\frac{\sum\limits_{i=1}^n X_{i}}{n}))^{2} \\
+	& = E((\frac{\sum\limits_{i=1}^n X_{i}}{n})^{2}) - Var(\frac{\sum\limits_{i=1}^n X_{i}}{n}) \\ 
+	& = E(\frac{1}{n^{2}}(\sum\limits_{i=1}^n X_{i})^{2})-\frac{1}{n^{2}}Var(\sum\limits_{i=1}^n X_{i}) \\ 
+	& = E(\frac{U^{2}}{n^{2}})-\frac{1}{n^{2}}n\sigma^{2} \\ 
+	& = E(\frac{U^{2}}{n^{2}})-\frac{\sigma^{2}}{n} \\
+\end{align*}
 
-Therefore,\\
-\indent$ E(W)= n(\sigma ^{2}+ \mu ^{2})$;That is, 
-$E(\frac{W}{n})\sigma ^{2}+ \mu ^{2} . $\\
+From this then, $\sigma^{2}  = \frac{1}{n-1}E(W-\frac{U^{2}}{n})$. then finally the following:
 
-So, \indent$\frac{W}{n}$ is an unbiased estimator of $\sigma ^{2}+ \mu ^{2}$.\\*
-3c.\\
+\begin{align*}
+	\sigma^{2}+\mu^{2} & = \sigma^{2}+E(\frac{U^{2}}{n^{2}})-\frac{\sigma^{2}}{n} \\ 
+	& = \frac{n-1}{n}\sigma^{2}+E(\frac{U^{2}}{n^{2}}) \\
+	& = \frac{n-1}{n}\frac{1}{n-1}E(W-\frac{U^{2}}{n})+E(\frac{U^{2}}{n^{2}}) \\
+	& = E(\frac{W}{n}-\frac{U^{2}}{n})+E(\frac{U^{2}}{n^{2}}) \\ 
+	& = E(\frac{W}{n}) \\
+	& = \frac{W}{n} \\
+\end{align*}
 
-In terms of indicator functions, \indent$Yi = I\lbrace Xi \le c\rbrace . $\\
+which is an unbiased estimator for $ \sigma^{2}+\mu^{2} $ \\
 
-Therefore, \indent$E(Yi)=P\lbrace Xi \le c\rbrace = FX(c)= \Phi (\frac{c - 
-?}{\sigma }),$\\
 
-showing that $Y_{i}$ is an unbiased estimator for $F_{X}(c).$
+c) Let c be a constant, and define $Y_{i}=1 $ if $ X_{i}\leq c $ and zero otherwise. Find a statistic that is a
+function of $Y_{1}, Y_{2}, ... Y_{n}$ and also unbiased for $F_{x}(c)=\phi(\frac{c-\mu}{\sigma}) $ : \\
+\begin{align*}
+	P(Y_{i}=1) & = P(X_{i}\leq c) \\
+	& = P(\frac{X_{i}-\mu}{\sigma} \leq \frac{c-\mu}{\sigma}) \\
+	& = P(N(0,1) \leq \frac{c-\mu}{\sigma}) \\
+	& = \phi(\frac{c-\mu}{\sigma}) \\
+	& = F_{x}(c)  \\
+\end{align*}
+\begin{align*}
+	E(Y_{i}) & = 1(P(Y_{i}=1)) + 0(P(Y_{i}=0)) \\
+	& = P(Y_{i}=1) \\
+	& = \phi(\frac{c-\mu}{\sigma}) \\
+\end{align*}
+\begin{align*}
+	E(\frac{1}{n}\sum\limits_{i=1}^n Y_{i}) & = \frac{1}{n}\sum\limits_{i=1}^n E(Y_{i}) \\ 
+	& = \frac{1}{n} n\phi(\frac{c-\mu}{\sigma}) \\ 
+	& = \phi(\frac{c-\mu}{\sigma}) \\
+\end{align*}
+Then $\frac{1}{n}\sum\limits_{i=1}^n Y_{i} = \bar{Y}$  
+which is unbiased for $ F_{x}(c) = \phi(\frac{c-\mu}{\sigma})$ \\
 
