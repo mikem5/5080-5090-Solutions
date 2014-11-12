@@ -1,19 +1,49 @@
 
-{\bf 9.01}\\Find the MMEs of $\theta$ based on a random sample $X_1,...,X_n$ from each of the following pdf's:
-\\\\a) $f(x;\theta )=\theta x^{\theta -1};0<x<1,0<\theta$
-\\First set the sample moment to the population moment.
-\\$\overline{X}=E[X]=\int_0^1 x\theta x^{\theta -1} dx=\int_0^1 \theta x^{\theta} dx=\frac{\theta x^{\theta +1}}{\theta +1}\Big|_0^1=\frac{\theta}{\theta +1}$
-\\Now solve for $\theta$ in terms of $\overline{X}$.
-\\$\frac{\theta}{\theta +1}=\overline{X}\longrightarrow \hat{\theta}=\frac{\overline{X}}{1-\overline{X}}$
-\\\\b) $f(x;\theta)=(\theta +1)x^{-\theta -2};1<x,0<\theta$
-\\First set the sample moment to the population moment.
-\\$\overline{X}=E[X]=\int_1^\infty x(\theta +1)x^{-\theta -2} dx=\int_1^\infty (\theta +1)x^{-\theta -1}dx=\frac{\theta +1}{-\theta}x^{-\theta}\Big|_1^\infty=\frac{\theta +1}{\theta}$
-\\Now solve for $\theta$ in terms of $\overline{X}$.
-\\$\frac{\theta +1}{\theta}=\overline{X} \longrightarrow \hat{\theta}=\frac{1}{\overline{X}-1}$
-\\\\c) $f(x;\theta)=\theta^2xe^{-\theta x};0<x,0<\theta$
-\\First set the sample moment to the population moment.
-\\$\overline{X}=E[X]=\int_0^\infty \theta^2x^2e^{-\theta x}dx=-\theta e^{-\theta x}x^2-2xe^{-\theta x}-\frac{2}{\theta}e^{-\theta x}\big|_0^\infty =\frac{2}{\theta}$
-\\Now solve for $\theta$ in terms of $\overline{X}$.
-\\$\frac{2}{\theta}=\overline{X}\longrightarrow \hat{\theta}=\frac{2}{\overline{X}}$  \\
+{\bf 9.01} Find the MMEs of $\theta$ based on a random sample $X_1,...,X_n$ from each of the following pdf's: \\
+
+
+a) $f(x;\theta )=\theta x^{\theta -1};0<x<1,0<\theta$ 
+
+First set the sample moment to the population moment.
+\begin{align*}
+	\overline{X}&=E[X] \\ 
+	&=\int_0^1 x\theta x^{\theta -1} dx \\ 
+	&=\int_0^1 \theta x^{\theta} dx \\ 
+	&=\frac{\theta x^{\theta +1}}{\theta +1}\Big|_0^1 \\
+	&=\frac{\theta}{\theta +1}
+\end{align*}
+
+Now solve for $\theta$ in terms of $\overline{X}$.
+$\frac{\theta}{\theta +1}=\overline{X}\longrightarrow \hat{\theta}=\frac{\overline{X}}{1-\overline{X}}$
+\\
+
+
+b) $f(x;\theta)=(\theta +1)x^{-\theta -2};1<x,0<\theta$
+
+First set the sample moment to the population moment.
+\begin{align*}
+	\overline{X}&=E[X]=\int_1^\infty x(\theta +1)x^{-\theta -2} dx\\
+	&=\int_1^\infty (\theta +1)x^{-\theta -1}dx \\
+	&=\frac{\theta +1}{-\theta}x^{-\theta}\Big|_1^\infty \\
+	&=\frac{\theta +1}{\theta}
+\end{align*}
+
+Now solve for $\theta$ in terms of $\overline{X}$.
+$\frac{\theta +1}{\theta}=\overline{X} \longrightarrow \hat{\theta}=\frac{1}{\overline{X}-1}$
+\\
+
+
+c) $f(x;\theta)=\theta^2xe^{-\theta x};0<x,0<\theta$
+
+First set the sample moment to the population moment.
+\begin{align*}
+	\overline{X}&=E[X] \\
+	&=\int_0^\infty \theta^2x^2e^{-\theta x}dx \\
+	&=-\theta e^{-\theta x}x^2-2xe^{-\theta x}-\frac{2}{\theta}e^{-\theta x}\big|_0^\infty \\
+	&=\frac{2}{\theta}
+\end{align*}
+
+Now solve for $\theta$ in terms of $\overline{X}$.
+$\frac{2}{\theta}=\overline{X}\longrightarrow \hat{\theta}=\frac{2}{\overline{X}}$  \\
 
 

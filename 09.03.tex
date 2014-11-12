@@ -1,23 +1,42 @@
-\bf{9.3} Find MLEs for the following pdfs.
-\noindent a) $f(x;\theta )=\begin{cases} \theta { x }^{ \theta -1 }\qquad 0<x<1 \\ 0\qquad otherwise \end{cases}$\\
-
-$L=\theta^{n} (x_{1}...x_{n})^{ \theta -1}$\\
-$lnL=nln\theta+(\theta-1)(lnx_{1}...lnx_{n})$\\
-$\frac{d}{d\theta}lnL=\frac{n}{\theta}+(lnx_{1}...lnx_{n})=0$\\
-$\hat{\theta}=\frac{-n}{(lnx_{1}...lnx_{n})}$
 
 
+{\bf 9.3} Find MLEs for the following pdfs, based on a sample of $X_{1}, ..., X_{n}$ random variables. \\
+(a),(b), and (c) are all found in a similar manner. We will go over the steps in part (a) and the remaining
+will just show the work without comment. \\
 
-\noindent b) $f(x;\theta )=\begin{cases} (\theta +1) { x }^{  -\theta -2 }\qquad 1<x \\ 0\qquad otherwise \end{cases}$\\
 
-$L=(\theta+1)^{n} (x_{1}...x_{n})^{ -\theta -2}$\\
-$lnL=nln(\theta+1)-(\theta+2)(lnx_{1}...lnx_{n})$\\
-$\frac{d}{d\theta}lnL=\frac{n}{(\theta+1)}-(lnx_{1}...lnx_{n})=0$\\
-$\hat{\theta}=\frac{n}{(lnx_{1}...lnx_{n})}-1$
+a) $f(x;\theta )=\begin{cases} \theta { x }^{ \theta -1 }\qquad 0<x<1 \\ 0\qquad otherwise \end{cases}$\\
 
-\noindent c) $f(x;\theta )=\begin{cases} \theta^{2} x{ e }^{ -\theta x }\qquad 0<x<1 \\ 0\qquad otherwise \end{cases}$\\
+\begin{align*}
+	L &=\theta^{n} (x_{1}...x_{n})^{ \theta -1} & \parbox[c]{0.4\linewidth} 
+{Set the likelyhood function equal to our joint pdf} \\
+	\ln L &= n\ln\theta+(\theta-1)(\ln x_{1}...\ln x_{n}) & \parbox[c]{0.4\linewidth} 
+{Now we take the natural log of this to get it in a workable state} \\
+	\frac{d}{d\theta}\ln L & =\frac{n}{\theta}+ ( \ln x_{1}...\ln x_{n} ) = 0 & \parbox[c]{0.4\linewidth} 
+{We now set our equation equal to zero to find the estimator} \\
+\end{align*}
 
-$L=\theta^{2n}(x_{1}...x_{n})e^{-\theta(x_{1}...x_{n})}$\\
-$lnL=2nln\theta+lnx_{1}+...+lnx_{n}-\theta(x_{1}+...+x_{n})$\\
-$\frac{d}{d\theta}lnL= \frac{2n}{\theta}-(x_{1}...x_{n})=0$\\
-$\hat{\theta}=\frac{2}{\overline{X}}$
+Solving the last equation for $\theta$ will yield our estimator, which in this case is
+$\hat{\theta}  =\frac{-n}{ ( \ln x_{1}... \ln x_{n} ) }$. \\
+
+
+b) $f(x;\theta )=\begin{cases} (\theta +1) { x }^{  -\theta -2 }\qquad 1<x \\ 0\qquad otherwise \end{cases}$\\
+
+\begin{align*}
+	L & = ( \theta+1)^{n} (x_{1}...x_{n})^{ -\theta -2}\\
+	\ln L & = n\ln (\theta+1)-(\theta+2)(\ln x_{1}...\ln x_{n})\\
+	\frac{d}{d\theta}\ln L & = \frac{n}{(\theta+1)}-(\ln x_{1}...\ln x_{n})=0\\
+	\hat{\theta} & = \frac{n}{(\ln x_{1}...\ln x_{n})}-1
+\end{align*}
+
+
+c) $f(x;\theta )=\begin{cases} \theta^{2} x{ e }^{ -\theta x }\qquad 0<x<1 \\ 0\qquad otherwise \end{cases}$\\
+
+\begin{align*}
+	L & =\theta^{2n}(x_{1}...x_{n})e^{-\theta(x_{1}...x_{n})}\\
+	\ln L & = 2n\ln\theta+\ln x_{1}+...+\ln x_{n}-\theta(x_{1}+...+x_{n})\\
+	\frac{d}{d\theta}\ln L & = \frac{2n}{\theta}-(x_{1}...x_{n})=0\\
+	\hat{\theta} & = \frac{2}{\overline{X}} 
+\end{align*}
+\\
+
