@@ -1,8 +1,21 @@
-{\bf 9.6} Find MLEs based on a random sample $x_{1}...x_{n}$ for the following pdfs. \\
+\noindent{\bf 9.6} Find MLEs based on a random sample $X_{1}...X_{n}$ for the following pdfs. \\
+\noindent a) $f(x; \theta_{1},\theta_{2} )=\begin{cases} \frac{1}{\theta_{2}-\theta_{1}} \qquad \theta_{1}<x<\theta_{2} 
+\\0\qquad otherwise \end{cases}$
+\\Since the pdf doesn't depend on X, we can write the likelihood function as:
+\begin{equation}L(\theta_1, \theta_2)=\left( \frac{1}{\theta_2 - \theta_1}\right)^n \nonumber \end{equation}
+\\We want this function to be maximized. So we need the denominator to be as small as possible which would give us the biggest fraction, namely we want to minimize $(\theta_2 -\theta_1)$. This means that we want the smallest value of $\theta_2$ and the largest value of $\theta_1$. We know that $\theta_1 \le x$, or in other words $\theta_1 \le X_{1:n}$. This means that the largest value of $\theta_1$ will be $X_{1:n}$. Similarily, to obtain the smallest value of $\theta_2$ we notice that $\theta_2 \ge X_{n:n}$.
+\\Therefore our MLEs for this pdf are $\hat{\theta_1}=X_{1:n}$ and $\hat{\theta_2}=X_{n:n}$.\\
 
-\noindent a) $f(x;\theta_{1},\theta_{2} )=\begin{cases} \frac{1}{\theta_{1}-\theta_{2}}\qquad \theta_{1}<x<\theta_{2} \\ 0\qquad otherwise \end{cases}$\\
+ b) $f(x;\theta, \eta )=\begin{cases} \theta n^{\theta}x^{-\theta-1}\qquad \eta \le x, 0<\theta, 0<\eta<\infty \\ 0\qquad otherwise \end{cases}$
 
+The likelihood function for this pdf will be:
+\begin{eqnarray*} L(\theta,\eta) &=& \prod \theta \eta^n x_i^{-\theta-1}\\
+ln(L) &=& \sum(ln(\theta)+\theta ln(\eta)+(-\theta-1)ln(x_i))\\
+ln(L) &=& nln(\theta)+n\theta ln(\eta)-\theta\sum ln(x_i)-\sum ln(x_i)\\
+\frac{d}{d\theta}ln(L) &=& \frac{n}{\theta}+n ln(\eta)-\sum ln(x_i)\\
+0 &=& \frac{n}{\theta}+n ln(\eta)-\sum ln(x_i)\\
+\hat{\theta} &=& \frac{n}{\sum ln(x_i) - n ln(\eta)}
+\end{eqnarray*}
 
-
-\noindent b) $f(x;\theta, \eta )=\begin{cases} \theta n^{\theta}x^{-\theta-1}\qquad \eta \le x, 0<\theta, 0<\eta<\infty \\ 0\qquad otherwise \end{cases}$\\ 
-
+\noindent If we look at the fact that $\eta \le x$ (meaning that $\eta \le X_{1:n}$) and notice that the term $\eta^\theta$ in the liklihood function will be maximized when $\eta$ is maximized, we can say right off the bat that $\hat{\eta}=X_{1:n}$.
+\\This gives the MLEs of $\hat{\eta}=X_{1:n}$ and $\hat{\theta}=\frac{n}{\sum ln(x_i) - n ln(X_{1:n})}$
