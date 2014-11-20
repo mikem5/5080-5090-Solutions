@@ -1,0 +1,38 @@
+
+
+{\bf 09.10} \textit{Please check this solution for accuracy} 
+
+Before we start, the pdf of $X \sim DE(\eta, \theta)$ is given by 
+$f(\eta,\theta) = \frac{1}{2 \theta} e^{-\frac{|x - \eta|}{\theta}}$. With $E(X) = \eta$ and 
+$Var(X) = 2\theta^2$. Of interest is the sum of the samples at a point $a$ given by $\sum |x - a|$.
+We can take the derivative of this at all points save for $x = a$. This yields something along the
+lines of $\frac{\sum (x - a)}{|x -a|}$ which will be a sum of $+1$ and $-1$'s. 
+We should
+also be able to say that when $a$ is the sample median that this should be $0$ as well since
+the most cancelation occurs when this is true. \\
+
+a) We want to maximize $f(\eta,1) = \frac{1}{2} e^{-\frac{|x - \eta|}{1}}$. We will use the
+above fact to proceed.
+\begin{align*}
+	L(\theta) & = \prod \frac{1}{2} e^{-|x - \eta|} \\
+	\ell & = \ln\left( \prod \frac{1}{2} e^{-|x - \eta|}\right) \\
+	& = \sum \left(\ln 1 - \ln 2  -|x - \eta| \right) \\
+	\frac{d \ell}{d\eta} & = \frac{\sum (x - \eta)}{|x - \eta|} 
+\end{align*}
+From above, we know then that we have a maximum when $\hat{\eta}$ is our sample median. \\
+
+b) With $\theta$ not set, we have instead two variables to maximize: 
+\begin{align*}
+	L(0) & = \prod \frac{1}{2 \theta} e^{-\frac{|x - \eta|}{\theta}} \\
+	\ell & = \ln\left(\prod \frac{1}{2 \theta} e^{-\frac{|x - \eta|}{\theta}}\right) \\
+	& = \sum \left(\ln 1 - \ln 2 - \ln\theta  -\frac{|x - \eta|}{\theta} \right) \\
+\intertext{We will solve for $\theta$ first}
+	\frac{d \ell}{d\theta} & = \frac{-n}{\theta} + \frac{\sum |x - \eta|}{\theta^2} = 0\\
+	\hat{\theta} & = \frac{ \sum |x - \eta|}{n}
+\end{align*}
+Now for $\hat{\eta}$ we follow the same logic as in part (a) and will find it again as to be
+the sample median. \\
+
+
+
+	

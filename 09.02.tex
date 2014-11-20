@@ -17,16 +17,16 @@ $\hat { \theta } = \frac{\overline { X }}{2}$\\
 
 
 d) ${ X }_{ i }\sim DE(\theta,\eta)$\\
-${ \mu  }_{ 1 }^{ ' }= \eta = \overline{X}  $\\
+${ \mu  }_{ 1 }^{ ' }= \eta = \overline{X} = \hat{\nu} $\\
 ${ \mu  }_{ 2 }^{ ' }= \sigma^{2}+\mu^{2} = 2\theta^{2}+\eta^{2}$\\
-$ \hat{\theta}= \sqrt{\frac{2\theta^{2}+\eta^{2}-\overline{X}^{2}}{2}}=\frac{\hat{\sigma}}{\sqrt{2}}$\\
+$ \hat{\theta}= \sqrt{\frac{\frac{\sum X^{2}}{n}-\overline{X}^{2}}{2}}$\\
 
 
 e) ${ X }_{ i }\sim EV(\theta,\eta)$\\
 ${ \mu  }_{ 1 }^{ ' }= \eta - \gamma \theta = \overline{X}  $\\
 ${ \mu  }_{ 2 }^{ ' }= \sigma^{2}+\mu^{2} = \frac{\pi^{2}\theta^{2}}{6} + (\eta - \gamma \theta)^{2}$\\
-$ \hat{\theta}= \frac{\sqrt{6}}{\pi}\hat{\sigma}$\\
-$ \hat{\eta}= \overline{X}+\gamma(\frac{\sqrt{6}}{\pi})\hat{\sigma}$\\
+$ \hat{\theta}= \frac{\sqrt{6}}{\pi}\sqrt{\frac{\sum X^{2}}{n} - \overline{X}^{2}}$\\
+$ \hat{\eta}= \overline{X}+\gamma(\frac{\sqrt{6}}{\pi})\sqrt{\frac{\sum X^{2}}{n} - \overline{X}^{2}}$\\
 
 
 f) ${ X }_{ i }\sim Par(\theta,k)$\\

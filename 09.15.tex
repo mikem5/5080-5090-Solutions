@@ -1,0 +1,22 @@
+{\bf 09.15} a) We will replace the $\hat{p}$ with our $\frac{X}{n}$ then solve for $c$: \\
+\begin{align*}
+	p(1-p) & = E \left( c \hat{p}(1- \hat{p}) \right) \\
+	& = E \left( c \frac{X}{n}(1 - \frac{X}{n}) \right) \\
+	& = E \left( c ( \frac{X}{n} - (\frac{X}{n})^{2} ) \right) \\
+	& = \frac{c}{n} \left( E \left( X \right) - E \left( \frac{X^{2}}{n} \right) \right) \\
+	& = \frac{c}{n} \left( np - (\frac{npq + (np)^{2}}{n}) \right) \\
+\intertext{After a little work we get the following} \\
+	& = \frac{c}{n} \left( p (n-1)(1-p) \right) \\
+\intertext{Solving for c against $p(1-p)$ then we get} \\
+	c & = \frac{n}{n-1} 
+\end{align*}
+
+b) From part (a) we can see that $\frac{n}{n-1}\hat{p}(1-\hat{p})$ is $pq$. For $Var(X)$ we simply need $npq$ so our
+solution, due to invariance, is $\frac{n^2}{n-1}\hat{p}(1-\hat{p})$ \\
+
+c) Since we have found estimator's for the mean and variance, we can use invariance to get estimators for the sample
+mean and sample variance. For $p$ we see that it is $\frac{\sum^{N} \hat{p}}{N}$ while $Var(X) =
+\sum^{N} \frac{n^2}{n-1} \frac{\hat{p}(1 - \hat{p})}{N}$ \\
+
+
+
