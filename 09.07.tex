@@ -1,10 +1,21 @@
 
 
 {\bf 9.7} Let $x_{1}...x_{n}$ be a random sample from ${ X }_{ i }\sim Geo(p)$. Find MLEs for the following. \\
+We must first find the MLE of $GEO(p)$: \\
+\begin{align*}
+	L(p) & = \prod p (1-p)^{x - 1} \\
+	\ell & = \sum \left( \ln p - (x-1) \ln (1-p) \right) \\
+	\frac{d \ell}{d p} & = \frac{n}{p} - \frac{\sum x - 1}{1-p}
+\intertext{Setting equal to zero then we get:}
+	\hat{p} & = \frac{1}{\overline{X}}
+\end{align*}
+We now use $\hat{p}$ to solve for the following with the invariance property. \\
+
+a) For $\tau(p) = E(X)= \frac{1}{p}$ we see that $\tau(\hat{p}) = \frac{1}{\frac{1}{\overline{X}}} = \overline{X}$ \\
+
+b) We let $\tau(p) = Var(X)=\frac{(1-p)}{p^{2}}$ then $\tau(\hat{p}) = \frac{1 - \frac{1}{\overline{X}}}{\frac{1}{\overline{X}^{2}}}
+	 = \overline{X}(\overline{X} - 1)$ \\
+
+c) Finally, $P[X>k]= (1-p)^{k}$ then we get $(1 - \frac{1}{\overline{X}})^{k}$ \\
 
 
-\noindent a) $E(X)= \frac{1}{p}$\\
-
-\noindent b) $Var(X)=\frac{(1-p)}{p^{2}}$\\
-
-\noindent c) $P[X>k]= (1-p)^{k}$\\
