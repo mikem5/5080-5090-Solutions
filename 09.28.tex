@@ -1,0 +1,31 @@
+\text{\Huge Solutions 9.28}\\
+
+\text{\Large 28a}\\
+
+$Var(\hat{\theta}_1) = Var(\bar{X}) = \frac{Var(X_1)}{n} = \frac{\theta ^2}{n}$\\
+
+$Var(\hat{\theta}_2) = \Big( \frac{n}{n+1} \Big)^2 Var(\bar{X}) = \Big( \frac{n}{n+1} \Big)^2 \frac{Var(X_1)}{n} = \frac{n\theta^2}{(n+1)^2}$\\
+
+\text{\Large 28b}\\
+
+$E(\hat{\theta}_1) = E(\bar{X}) = \theta$\\
+
+$E(\hat{\theta}_2) = \frac{n\theta}{n+1}$\\
+
+Therefore it is shown that $\hat{\theta}_1$ is unbiased\\
+
+$bias(\hat{\theta}_2) = \frac{n\theta}{n+1} - \theta = -\frac{\theta}{n+1}$\\
+
+$MSE(\hat{\theta}_1) = \frac{\hat{\theta}_2)}{n}, \enskip \text{and} \enskip MSE(\hat{\theta}_2) = \frac{n\theta ^2}{(n+1)^2} + \frac{\theta ^2}{(n+1)^2} = \frac{\theta ^2}{n+1}$\\
+
+\text{\Large 28c}\\
+
+Since $ \frac{n}{n+1} < 1$, then $Var(\hat{\theta}_1)$ will always be greater than $Var(\hat{\theta}_2)$\\
+
+Hence there is no real need to compare the variances\\
+
+\text{\Large 28d}\\
+
+From Part(c), we know that $Var(\hat{\theta}_2)$ is always better than $Var(\hat{\theta}_1)$\\
+
+Hence there is no real need to compare the MSEs\\

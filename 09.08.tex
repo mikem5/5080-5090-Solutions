@@ -1,0 +1,19 @@
+\text{\Huge Solutions 9.8}\\
+
+\text{\Large 8a}\\
+
+$P[X > c]$ for some c is $1-\phi{\Big( \frac{c-\mu}{\theta}} \Big)$\\
+
+Therefore, the MLE is $1-\phi{\Big(\frac{c-\bar{X}}{\sqrt{n^{-1} \sum{(X_j - \bar{X})^2}}}} \Big)$\\
+
+\text{\Large 8b}\\
+
+To find the 95th percentile of X we need to find\\
+
+$0.95 \enskip = \enskip P[X > x] \enskip = \enskip \phi{\Big( \frac{x- \mu}{\theta}} \Big)$\\
+
+Hence, $\frac{x-\mu}{\theta}$ = 1.645 $\enskip \Rightarrow \enskip x=\text{1.645}\theta + \mu$\\
+
+By applying the MLE from Part(a) it is shown that\\
+
+$\hat{x} \enskip = \enskip \text{1.645} \sqrt{n^{-1} \sum{(X_j - \bar{X})^2}} + \bar{X}$\\
