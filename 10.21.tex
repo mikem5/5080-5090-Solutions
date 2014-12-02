@@ -1,0 +1,38 @@
+
+\text{\huge Solutions 10.21}\\
+
+\text{\Large 21(a)}\\
+
+The pdf for BIN(1,p) is\\
+
+$f(x,p)=p^{x}(1-p)^{1-x}I[x=0,1]$\\
+
+$\quad \quad = (1-p) \Big( \frac{p}{1-p} \Big) ^{x} I[x=0,1]$\\
+
+$\quad \quad = (1-p) e^{log(\frac{p}{1-p}) x} I[x=0,1]$\\
+
+This is the Regular Exponential Class\\
+
+Which implies $\sum{X_i}$ is sufficient and complete for p.\\
+
+It is known that if $S= \frac{1}{n-1} \sum{(X_i - \bar{X})}^2 = \frac{1}{n-1}\sum{X_i}^2 - \frac{n}{n-1}\sum{\bar{X}}^2$\\
+
+then E(S) = p(1-p). Since X can only be 0 or 1, then with $\sum{X_i}^2$, we have\\
+
+$S=\frac{1}{n-1}\sum{X_i} - \frac{n}{n-1}\bar{X}^2 \enskip = \enskip \frac{n}{n-1} \bar{X}(1-\bar{X})$\\
+
+Which is both unbiased and a complete and sufficient statistic.\\
+
+Therefore S is the UMVUE for p(1-p).\\
+
+\text{\Large 21(b)}\\
+
+Using S from Part(a), we know that E(S)=p(1-p) = $p-p^2 = E(\bar{X}) - p^2$\\
+
+Let T= $\bar{X}$ - S, then ET - p-p(1-p) = $p^2$.\\
+
+Notice T is a function of $\sum{X_i}$ is a UMVUE for $p^2$\\
+
+T can be simplified further,\\
+
+$T=\bar{X} - \frac{n}{n-1}\bar{X}(1-\bar{X}) = \bar{X} \Big[ 1-\frac{1-\bar{X}}{n-1} \Big] = \bar{X} \Big( \frac{n+\bar{X}}{n-1}\Big)$\\

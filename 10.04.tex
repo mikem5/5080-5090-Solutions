@@ -1,0 +1,34 @@
+
+\text{\huge Solutions 10.4}\\
+
+$S_1,...,S_n$ is jointly sufficient if equation 10.2.1 is not dependent on $\theta$ \\
+
+Equation 10.2.1 \quad $f_{X|S}(x_1,...,x_n) = \begin{cases} \frac{f(x_1,...,x_n);\theta}{f_s(s;\theta)} \enskip if \enskip \emph{s} (x_1,...,x_n) = s, \\
+0\enskip , \enskip o/w \end{cases}$\\
+ 
+For a two parameter exponentional with $\theta$=1 and $\eta = \eta$ then \\
+
+$f(t;\eta)=\begin{cases} e^{-(t-\eta)}\enskip ,\enskip x>\eta  \\
+0\enskip ,\enskip o/w \end{cases}$ \\
+
+Hence, \\
+
+Therefore $f(\textbf{x};\eta) = e^{-\sum(x_i - \eta)}I[X_{1:n} >\eta]$ \\
+
+Notice the largest $\eta$ can ever be is $X_{1:n}$, \enskip hence \enskip S=$X_{1:n}$ \\
+
+The pdf of the $X_{1:n}$ is needed to compute equation 10.2.1 \\
+
+$P(S \le s) = 1-(P(X_{1:n} > s))^n \quad \forall S$\\
+
+$F(s) = \int_{\eta}^{s}e^{-(x- \eta )}dx \enskip \Rightarrow \enskip -e^{-(x- \eta)} \Big]_{\eta}^{s} \enskip \Rightarrow \enskip \begin{cases} 1-e^{-(s-\eta)}\enskip ,\enskip s>\eta  \\
+0\enskip ,\enskip o/w \end{cases}$\\
+
+$f_S(s) = \frac{d}{ds}(1-(1-F(s))^n) \enskip = \enskip n(1-F(s))^{n-1}f_S(s) \enskip = \enskip ne^{-(s- \eta)}I[s > \eta]$\\
+
+By 10.2.1, \enskip $f_{X|S}(x_1,...,x_n) =\frac{f(x_1,...,x_n);\eta}{f_s(s;\eta)}I[X_{1:n} >\eta]$ \\
+
+$\enskip=\frac{e^{-\sum(x_i - \eta)}I[X_{1:n} >\eta]}{ne^{-(s-\eta)}I[s > \eta]}I[X_{1:n} >\eta] \enskip = \enskip \frac{e^{-\sum(x_i)}}{ne^{-ns}}I[X_{1:n}] \enskip = \enskip \frac{e^{-\sum(x_i - s)}}{\text{n}} I[X_{1:n}]$\\
+
+Which is not dependent on $\eta$, therefore S=$X_{1:n}$ is sufficient.
+

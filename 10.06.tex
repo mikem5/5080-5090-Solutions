@@ -1,0 +1,27 @@
+\text{\huge Solutions 10.6}\\
+
+The joint pmf for $BIN(m_i,p)$ \\
+
+$\quad = \enskip f(x_1,...,x_n; \mathbf{\theta}) = \prod \dbinom{m_i}{x_i} p^{x_i}q^{m_i - x_i} I[x_i = 0,...,m_i \enskip \forall \enskip i=1,...n] $ \\
+
+$\quad = \enskip \prod \dbinom{m_i}{x_i} p^{\sum{x_i}}q^{\sum(m_i - x_i)} I[x_i = 0,...,m_i \enskip \forall \enskip i=1,...n] $ \\
+
+$\quad = \enskip \prod \dbinom{m_i}{x_i} p^{\sum{x_i}} q^{\sum{m_i}} \frac{1}{q^{\sum{x_i}}} I[x_i = 0,...,m_i \enskip \forall \enskip i=1,...n] $ \\
+
+$\quad = \enskip \prod \dbinom{m_i}{x_i} \frac{p^{\sum{x_i}}}{q^{\sum{x_i}}}q^{\sum{m_i}} I[x_i = 0,...,m_i \enskip \forall \enskip i=1,...n] $ \\
+
+$\quad = \enskip \prod \dbinom{m_i}{x_i} \Big( \frac{p}{q} \Big)^{\sum{x_i}} q^{\sum{m_i}} I[x_i = 0,...,m_i \enskip \forall \enskip i=1,...n] $ \\
+
+Let C= $\prod \dbinom{m_i}{x_i}$\\
+
+$\quad = \enskip C \Big( \frac{p}{q} \Big)^{\sum{x_i}}q^{\sum{m_i}} I[x_i = 0,...,m_i \enskip \forall \enskip i=1,...n] $ \\
+
+Now let C$'$ = $\prod \dbinom{m_i}{x_i}q^{\sum{m_i}}$\\
+
+$\quad = \enskip C' \Big( \frac{p}{q} \Big)^{\sum{x_i}} I[x_i = 0,...,m_i \enskip \forall \enskip i=1,...n] $ \\
+
+Now let S=$\sum{X_i}$ \\
+
+$\quad = \enskip  C' \Big( \frac{p}{q} \Big)^{S} I[x_i = 0,...,m_i \enskip \forall \enskip i=1,...n]$ \\
+
+By prime factorization, it is shown that S=$\sum{X_i}$ is sufficient.

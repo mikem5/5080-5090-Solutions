@@ -1,0 +1,17 @@
+\text{\huge Solutions 10.7}\\
+
+The joint pmf for NB($r_i$,p) is \\
+
+$ \quad f(x_1,...,x_n; \mathbf{\theta}) = \prod \dbinom{x_i - 1}{r_i - 1} p^{r_i} q^{x_i - r_i} I[x_i = r_1, r_1 + 1,... \enskip \forall \enskip i\le n]$\\
+
+$ = \prod \dbinom{x_i - 1}{r_i - 1} p^{\sum{r_i}} q^{\sum{x_i}} \frac{1}{q^{\sum{r_i}}} I[x_i = r_1, r_1 + 1,... \enskip \forall \enskip i\le n]$\\
+
+$ = \prod \dbinom{x_i - 1}{r_i - 1} \frac{p^{\sum{r_i}}}{q^{\sum{r_i}}} q^{\sum{x_i}} I[x_i = r_1, r_1 + 1,... \enskip \forall \enskip i\le n]$\\
+
+$ = \prod \dbinom{x_i - 1}{r_i - 1} \Big(\frac{p}{q}\Big)^{\sum{r_i}} q^{\sum{x_i}} I[x_i = r_1, r_1 + 1,... \enskip \forall \enskip i\le n]$\\
+
+Let C=$ \prod \dbinom{x_i - 1}{r_i - 1} \Big(\frac{p}{q}\Big)^{\sum{r_i}}$ \\
+
+$ = C q^{\sum{x_i}} I[x_i = r_1, r_1 + 1,... \enskip \forall \enskip i\le n]$\\
+
+Therefore, by factorization criterion it is shown that S=$\sum{X_i}$ is sufficient\\
