@@ -1,0 +1,16 @@
+
+\noindent \textbf{9.17} Let $X_{1}...X_{n}$ be a random sample from a uniform distribution $X_{i} \sim Unif(\theta-1,\theta+1$\\
+
+a) Show that the sample mean $(\overline{X})$ is an unbiased estimator of $\theta$\\
+
+$E[\overline{X}]=\frac{[(\theta-1)+(\theta+1)]}{2}=\theta$
+
+b) Show that the midrange  $\frac{(X_{1:n}+X_{n:n})}{2}$ is an unbiased estimator of $\theta$
+
+$F_{n:n}(t)=\frac{(t-(\theta-1))^{n}}{2^{n}}$, so $\frac { d }{ dt } F_{ n:n }(t)=\frac { d }{ dt } \frac { (t-(\theta -1))^{ n } }{ 2^{ n } } =\frac { n(t-\theta +1)^{ n-1 } }{ 2^{ n } } $\\
+
+$E[{ X }_{ n:n }]=\int _{ \theta -1 }^{ \theta +1 }{ \frac { t[n{ (t-\theta +1) }^{ n-1 } }{ { 2 }^{ n } }  } dt$,\\ Use the Convolution formula: $=\int _{ \theta -1 }^{ \theta +1 }{ \frac { n{ (t-\theta +1) }^{ n } }{ { 2 }^{ n } }  } dt+(\theta -1)\int _{ \theta -1 }^{ \theta +1 }{ \frac { n{ (t-\theta +1) }^{ n-1 } }{ { 2 }^{ n } }  } dt=\theta +\frac { 2n }{ n+1 } -1$\\
+
+${ E[X }_{ 1:n }]=\theta -\frac { 2n }{ n+1 } +1,\quad E[\frac { { X }_{ 1:n }+{ X }_{ 1:n } }{ 2 } ]$ \\
+
+

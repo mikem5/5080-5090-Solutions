@@ -1,4 +1,4 @@
-\noindent \textbf{9.9} Suppose that $x_{1:n}$ and $x_{n:n}$ are the smallest and largest observed values of a random sample of size n from a distribution with pdf $f(x;\theta); 0<\theta$\\
+\textbf{9.9} Suppose that $x_{1:n}$ and $x_{n:n}$ are the smallest and largest observed values of a random sample of size n from a distribution with pdf $f(x;\theta); 0<\theta$\\
 
 a) if $f(x;\theta)=1$ for $\theta-0.5 \le x \le \theta +0.5$, zero otherwise, show that any value $\hat(\theta)$ such that $x_{n:n}-0.5 \le \hat(\theta) \le x_{1:n}+0.5$ is an ML estimate of $\theta$.
 
@@ -9,21 +9,10 @@ solutions:$L(\theta )=1 $for$\theta-0.5\le { x }_{ 1:n }$ and$ { x }_{ n:n }\ge 
 
 b) if $f(x;\theta)=\frac{1}{\theta}$ for $\theta \le x \le 2\theta$, zero otherwise, show that any value $\hat(\theta)=0.5x_{n:n}$ is an ML estimate of $\theta$.
 
-solutions:$ L(\theta)=\frac { 1 }{ { \theta  }^{ n } }$ if $(\theta) \le {x}_{1:n}$ and ${x}_{n:n}\le 2(\theta) $ or if$ \frac { { x }_{ n:n } }{ 2 } \le (\theta) \le {x}_{1:n}. L(\theta)$ is maximized in this interval when$ (\theta)$ is minimized, so we must have $\hat { \theta  } = \frac { { x }_{ n:n } }{ 2 } $as the MLE.
+solutions:$ L(\theta)=\frac { 1 }{ { \theta  }^{ n } }$ if $(\theta) \le {x}_{1:n}$ and ${x}_{n:n}\le 2(\theta) $ or if$ \frac { { x }_{ n:n } }{ 2 } \le (\theta) \le {x}_{1:n}. L(\theta)$ is maximized in this interval when$ (\theta)$ is minimized, so we must have $\hat { \theta  } = \frac { { x }_{ n:n } }{ 2 } $as the MLE. \\
 
 
 
 
-\noindent \textbf{9.17} Let $X_{1}...X_{n}$ be a random sample from a uniform distribution $X_{i} \sim Unif(\theta-1,\theta+1$\\
 
-a) Show that the sample mean $(\overline{X})$ is an unbiased estimator of $\theta$\\
 
-$E[\overline{X}]=\frac{[(\theta-1)+(\theta+1)]}{2}=\theta$
-
-b) Show that the midrange  $\frac{(X_{1:n}+X_{n:n})}{2}$ is an unbiased estimator of $\theta$
-
-$F_{n:n}(t)=\frac{(t-(\theta-1))^{n}}{2^{n}}$, so $\frac { d }{ dt } F_{ n:n }(t)=\frac { d }{ dt } \frac { (t-(\theta -1))^{ n } }{ 2^{ n } } =\frac { n(t-\theta +1)^{ n-1 } }{ 2^{ n } } $\\
-
-$E[{ X }_{ n:n }]=\int _{ \theta -1 }^{ \theta +1 }{ \frac { t[n{ (t-\theta +1) }^{ n-1 } }{ { 2 }^{ n } }  } dt$,\\ Use the Convolution formula: $=\int _{ \theta -1 }^{ \theta +1 }{ \frac { n{ (t-\theta +1) }^{ n } }{ { 2 }^{ n } }  } dt+(\theta -1)\int _{ \theta -1 }^{ \theta +1 }{ \frac { n{ (t-\theta +1) }^{ n-1 } }{ { 2 }^{ n } }  } dt=\theta +\frac { 2n }{ n+1 } -1$\\
-
-${ E[X }_{ 1:n }]=\theta -\frac { 2n }{ n+1 } +1,\quad E[\frac { { X }_{ 1:n }+{ X }_{ 1:n } }{ 2 } ]$
