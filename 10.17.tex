@@ -1,33 +1,32 @@
 
-\text{\huge Solutions 10.17}\\
+{\bf 10.17}\\
 
-\text{\Large 17(a)}\\
+\text{17(a)}\\
 
 With a two parameter exponential EXP(1,$\eta$) the pdf is\\
 
 $\quad f(x) = e^{-(x-\eta)}I[x > \eta]$ \\
 
 $\quad = \enskip e^{-x}e^{\eta}I[x > \eta]$ \\
-\[
-$$This is a range-dependent exponential. Following the range-dependent theorem, stating if $q_1(\theta)$ is increasing and $q_2(\theta)$ is decreasing then $T_1 = min[q_1^{-1},q_2^{-1}]$ is a sufficient statistic. Therefore S=$X_{1:n}$ is complete and sufficient for $\eta$.$$ \\
-\]
 
-\text{\Large 17(b)}\\
+This is a range-dependent exponential. Following the range-dependent theorem, stating if $q_1(\theta)$ is increasing and $q_2(\theta)$ is decreasing then $T_1 = min[q_1^{-1},q_2^{-1}]$ is a sufficient statistic. Therefore S=$X_{1:n}$ is complete and sufficient for $\eta$ \\
+
+
+\text{17(b)}\\
 
 In order to prove $X_{1:n}$ - $\frac{1}{n}$ is a UMVUE of $\eta$ we need to show it is unbiased.\\
-\[
-$$Note: If $X_i \sim$ iid f(x;$\theta$), S is complete and sufficient, and T=t(s) is unbiased, then T is a UMVUE.$$\\
-\]
+Note: If $X_i \sim$ iid f(x;$\theta$), S is complete and sufficient, and T=t(s) is unbiased, then T is a UMVUE.\\
+
 bias is given by b(T) = E(T) - $\tau{\theta}$\\
 
 $E(X_{1:n}) = \eta + \frac{1}{n}$\\
 
 $b(\eta) = \eta + \frac{1}{n} - \eta = \frac{1}{n}$\\
-\[
-$$Therefore $X_{1:n} - \frac{1}{n}$ is an unbiased estimator and thus a UMVUE for $\eta$ $$\\
-\]
 
-\text{\Large 17(c)} \\
+Therefore $X_{1:n} - \frac{1}{n}$ is an unbiased estimator and thus a UMVUE for $\eta$ \\
+
+
+\text{17(c)} \\
 
 To find the pth percentile ($x_p$) in terms of $\eta$ we need to solve\\
 

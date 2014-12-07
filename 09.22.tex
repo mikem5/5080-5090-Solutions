@@ -1,31 +1,30 @@
-\text{\Large 22a}\\
 
-To find the CRLB we need the likelihood function\\
 
-$L(\mu) = (18\pi)^{-\frac{n}{2}} e^{\Big(\frac{-1}{18} \sum{(X_i - \mu)^2}\Big)}$\\
+{\bf 09.22} a) First we find $\tau(\theta)$, in our case it is $\mu$ so we compute $(\tau'(\theta))^2 = 1$. Next we turn
+our attention to the denominator of our CRLB: \\
+\begin{align*}
+	f(x;\mu,9) & =	\frac{1}{\sqrt{2 \pi 9}} e^{-\frac{(x - \mu)^{2}}{(2)(9)}} \\
+	\ln f & = \ln \left( \frac{1}{\sqrt{2 \pi 9}}\right) +  - \frac{(x - \mu)^{2}}{(2)(9)} \\
+	\frac{d \ln f}{d \mu} & = \frac{(x - \mu)}{(9)} \\
+	\frac{d^2 \ln f}{d \mu^2} & =  - \frac{1}{9} \\
+\end{align*} 
 
-$lnL(\mu) = -\frac{n}{2}log(18\pi) - \frac{1}{18}\sum{(X_i - \mu)^2}$\\
+We would normally need to take the expectation here but a constant will yield a constant so we may simply continue
+and compute the rest of our CRLB. \\
+\begin{align*}
+	Var(T) & \geq \frac{1}{ - n \left( \frac{-1}{9} \right) } \\
+		& \geq \frac {9}{n} 
+\end{align*}
+Which is our CRLB. \\
 
-$\frac{\partial}{\partial \mu} ln L(\mu) = \frac{1}{9} \sum{(X_i - \mu)} = \frac{n}{9}\bar{X} - \frac{n\mu}{9}$\\
+b) Since $Var(\overline{X}) = \frac{\sigma^2}{n}$ we know that this MLE is a UMVUE since it is exactly our CRLB. \\
 
-If T is an unbiased estimator for $\mu$, then\\
+c) We have to find the 95th percentile first,  $\Pr ( X \leq x_{.95} )$. Since we are normal, we just transform to
+a standard normal, then find the actual value using a table. $\Phi \left( \frac{x_{.95} - \mu}{3} \right) $ and then 
+$\frac{x_{.95} - \mu}{3} = 1.645$ so $x_{.95} = 4.935 + \mu$. Due to invariance we can set our 
+$\tau(\hat{\theta)} = 4.935 + \hat{\mu}$ where $\hat{\mu} = \overline{X}$, our MLE of $\mu$. The variance of $\hat{\theta}$
+is clearly a UMVUE since it is the CRLB as well, this being due to the  rules of variances having any constant zeroed out, 
+leaving us with our normal $\mu$. \\
 
-$Var(T) \enskip \ge \enskip \frac{1}{Var(\frac{\partial}{\partial \mu} ln L(\mu))} \enskip = \enskip \frac{1}{({n^2}/81)Var(\bar{X})} \enskip = \enskip \frac{1}{({n^2}/81)(9/n)} \enskip = \enskip \frac{9}{n}$\\
 
-\text{\Large 22b}\\
 
-Yes, by checking the bias it is shown that $\hat{\mu} = \bar{X}$ is a UMVUE of $\mu$\\
-
-\text{\Large 22c}\\
-
-To find the 95th percentile MLE we need\\
-
-0.95 = $P[X_1 \le x_{0.95}] = \phi{\Big( \frac{x_{0.95} - \mu}{3}}\Big) \Rightarrow \frac{x_{0.95} - \mu}{3} = 1.645 \Rightarrow x_{0.95}  = 4.935+\mu $\\
-
-By using the MLE $\bar{X}$ from Part(b), we see that\\
-
-$\hat{x}_{0.95} = 4.935 + \bar{X} \enskip \Rightarrow \enskip E(\hat{x}_{0.95}) = 4.935 + \mu = x_{0.95}$\\
-
-$Var(\hat{x}_{0.95}) = Var(4.935 + \bar{X}) = Var(\bar{X}) = \frac{9}{n} = CRLB$\\
-
-Therefore, the 95th percentile MLE is a UMVUE\\

@@ -1,6 +1,6 @@
-\text{\Huge Solutions 9.34}\\
+\text{\bf Solutions 9.34}\\
 
-\text{\Large 34a}\\
+\text{34a}\\
 
 To find the MLE of p we need to calculate the likelihood function\\
 
@@ -12,13 +12,13 @@ $\frac{\partial}{\partial p} lnL(p) = \frac{n}{p} - \frac{n\bar{X}}{1-p} \enskip
 
 $\frac{1}{\hat{p}} = \frac{\bar{X}}{1-\hat{p}} \enskip \Rightarrow \enskip \hat{p} = \frac{1}{1+\bar{X}}$\\
 
-\text{\Large 34b}\\
+\text{34b}\\
 
 To find the MLE of $\theta = \frac{1-\hat{p}}{\hat{p}}$ we use the principle of MLEs to say,\\
 
 $\hat{\theta} = \frac{1-\hat{p}}{\hat{p}} = \frac{1-(1+\bar{X})^{-1}}{(1+\bar{X})^{-1}} = \bar{X}$\\
 
-\text{\Large 34c}\\
+\text{34c}\\
 
 Note: $\theta = \tau(p)$, in which $\tau(p) = \frac{1-p}{p}$, then $\tau ' (p) = -\frac{1}{p^2}$\\
 
@@ -28,19 +28,19 @@ and that the variance of GEO(p) is $\frac{1-p)}{p^2}$ then the CRLB is\\
 
 $\frac{[\tau ' (p)]^2}{n/(p^2 (1-p))} = \frac{p^{-4}}{n/(p^2 (1-p))} = \frac{1-p}{np^2}$\\
 
-\text{\Large 34d}\\
+\text{34d}\\
 
 No, the MLE is not a UMVUE because the MLE is biased since\\
 
 $E(\hat{\theta}) = E(\bar{X}) = E(X_1) = \frac{1}{p} \neq \frac{1-p}{p} \enskip \forall \enskip 0<p<1$\\
 
-\text{\Large 34e}\\
+\text{34e}\\
 
 No it is not consistent because the bias doesn't converge to zero as $n \to \inf$\\
 
 In fact the bias($\hat{\theta}$) = $\frac{1}{p} - \frac{1-p}{p}$ = 1, always\\
 
-\text{\Large 34f}\\
+\text{34f}\\
 
 Since E($\bar{X}$) = $\frac{1}{p}$ and Var($\bar{X}$) = $\frac{Var(X_1)}{n} = \frac{1-p}{np^2}$ Then by CLT\\
 
